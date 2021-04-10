@@ -6,7 +6,7 @@
   "references": ["path/to/references"],
   "references_tags": ["value", "painting", "color"],
   "tags": ["value", "painting", "edge", "color", "fundamental"],
-  "categories": ["painting", "composition", "color"],
+  "categories": ["painting"],
   "template": ".\\templates\\value.clip",
   "data": {}
 }

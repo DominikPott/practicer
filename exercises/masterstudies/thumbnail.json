@@ -6,7 +6,7 @@
   "references": ["path/to/references"],
   "references_tags": ["value", "composition", "painting"],
   "tags": ["value", "composition", "painting", "edge", "color"],
-  "categories": ["painting", "composition"],
+  "categories": ["masterstudies"],
   "template": ".\\templates\\thumbnail.clip",
   "data": {}
 }

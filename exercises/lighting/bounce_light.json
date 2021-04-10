@@ -5,8 +5,8 @@
   "instruction": "Paint the effect of light bouncing of objects and onto others.",
   "references": ["path/to/references"],
   "references_tags": ["light", "painting", "color", "bounce light"],
-  "tags": ["value", "painting", "bounce light", "color"],
-  "categories": ["painting", "color", "light", "fundamental"],
+  "tags": ["value", "painting", "bounce light", "color", "fundamental"],
+  "categories": ["light"],
   "template": ".\\templates\\bounce_light.clip",
   "tutorials": ["https://www.drawing.com"],
   "data": {}

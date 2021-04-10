@@ -6,7 +6,7 @@
   "references": ["path/to/references"],
   "references_tags": ["light", "painting", "color"],
   "tags": ["light", "value", "painting", "color", "fundamental"],
-  "categories": ["painting", "light","color"],
+  "categories": ["light"],
   "template": ".\\templates\\light_scenarios.clip",
   "tutorials": ["https://www.drawing.com"],
   "data": {}

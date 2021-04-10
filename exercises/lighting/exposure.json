@@ -5,8 +5,8 @@
   "instruction": "Choose under or overexposed and adjust the values and colors on the objects accordingly.",
   "references": ["path/to/references"],
   "references_tags": ["light", "painting", "color", "exposure"],
-  "tags": ["value", "painting", "exposure", "color"],
-  "categories": ["painting", "color", "fundamental"],
+  "tags": ["value", "painting", "exposure", "color", "fundamental"],
+  "categories": ["color"],
   "template": ".\\templates\\light_scenarios.clip",
   "tutorials": ["https://www.drawing.com"],
   "data": {}

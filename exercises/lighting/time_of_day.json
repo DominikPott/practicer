@@ -5,8 +5,8 @@
   "instruction": "Pick a daytime, seach for reference and try to transfer the lighting onto a simple scene.",
   "references": ["path/to/references"],
   "references_tags": ["light", "painting", "color"],
-  "tags": ["value", "painting", "light", "color", "fundamental"],
-  "categories": ["painting", "light", "color"],
+  "tags": ["value", "painting", "edge", "color", "fundamental"],
+  "categories": ["light"],
   "template": ".\\templates\\time_of_day.clip",
   "data": {}
 }

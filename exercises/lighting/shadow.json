@@ -1,13 +1,13 @@
 {
-  "name": "shadows",
-  "thumbnail": ".\\exercises\\lighting\\shadows.jpg",
+  "name": "shadow",
+  "thumbnail": ".\\exercises\\lighting\\shadow.jpg",
   "summary": "Construct shadows for simple and complex objects.",
   "instruction": "Construct the shadow of simple grids and sticks. These can be cast on other objects. Try different lights to see the effect of hard or soft shadows.",
   "references": ["path/to/references"],
   "references_tags": ["light", "painting", "color"],
   "tags": ["value", "painting", "edge", "color", "fundamental", "shadow"],
-  "categories": ["painting", "light"],
-  "template": ".\\templates\\light_scenarios.clip",
+  "categories": ["light"],
+  "template": ".\\templates\\shadow.clip",
   "tutorials": ["https://www.drawing.com"],
   "data": {}
 }

@@ -6,7 +6,7 @@
   "references": ["path/to/references"],
   "references_tags": ["light", "painting", "color", "ambient occlusion"],
   "tags": ["value", "painting", "ambient occlusion", "fundamental"],
-  "categories": ["painting", "ambient occlusion"],
+  "categories": ["light"],
   "template": ".\\templates\\ambient_occlusion.clip",
   "tutorials": ["https://www.drawing.com"],
   "data": {}
