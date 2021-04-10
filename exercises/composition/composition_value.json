@@ -1,0 +1,11 @@
+{
+  "name": "value composition",
+  "thumbnail": "Z:\\zeichnungen\\210409\\value_v02.jpg",
+  "summary": "an exercise in value composition",
+  "instruction": "Paint an interesting picture with 3-4 values",
+  "references": "path/to/reference",
+  "references_tags": ["value", "composition"],
+  "tags": ["value", "composition", "painting"],
+  "categories": ["painting", "composition"],
+  "data": {}
+}

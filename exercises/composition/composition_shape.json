@@ -1,0 +1,12 @@
+{
+  "name": "shape composition",
+  "thumbnail": "Z:\\zeichnungen\\210409\\value_v02.jpg",
+  "summary": "an exercise in shape composition and form language",
+  "instruction": "Paint an interesting picture with diffent shapes. (Circles, Boxes, Triangles)",
+  "references": "path/to/reference",
+  "references_tags": ["shape", "composition"],
+  "tags": ["shape", "composition", "design", "graphical"],
+  "categories": ["painting", "composition"],
+  "timers": [120, 600],
+  "data": {}
+}
