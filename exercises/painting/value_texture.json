@@ -1,0 +1,12 @@
+{
+  "name": "value_texture",
+  "thumbnail": ".\\exercises\\painting\\value_texture.jpg",
+  "summary": "Paint basic and simple Objects and blend a photo texture into it.",
+  "instruction": "Paint imaginative or refernced simple objects. Blend a phototexture into some area and adjust its values to match your painting.",
+  "references": ["path/to/references"],
+  "references_tags": ["value", "painting"],
+  "tags": ["value", "painting", "texture", "fundamental"],
+  "categories": ["painting"],
+  "template": ".\\templates\\default.clip",
+  "data": {}
+}

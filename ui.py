@@ -14,10 +14,9 @@ class PractiseApp(QtWidgets.QMainWindow):
         self._exercises = exercises
         self.exercise = self._exercises[0]
 
-        self.exercises_overview = QtWidgets.QListWidget()
+        self.exercises_overview = ExerciseTree(exercises=self._exercises)
 
         self.thumbnail = QtWidgets.QLabel()
-
         self.summary = QtWidgets.QLabel()
         self.instruction = QtWidgets.QLabel()
         self.instruction.setWordWrap(True)
@@ -36,39 +35,63 @@ class PractiseApp(QtWidgets.QMainWindow):
         central_widget.setLayout(self.mainLayout)
         self.setCentralWidget(central_widget)
 
-        self.populate_exercise_list()
-
-        self.exercises_overview.clicked.connect(self.exercise_changed)
-        self.exercises_overview.doubleClicked.connect(self.open_exercise)
+        self.exercises_overview.changed.connect(self.exercise_changed)
+        self.exercises_overview.double_clicked.connect(self.open_exercise)
         self.refresh()
 
     def refresh(self):
         self.summary.setText(self.exercise.get("summary", "No Summary"))
         self.instruction.setText(self.exercise.get("instruction", "No Instructions"))
-        self._updateThumbnail()
+        self._update_thumbnail()
 
-    def _updateThumbnail(self):
+    def _update_thumbnail(self):
         thumbnail_path = self.exercise.get("thumbnail", "")
         thumbnail = QtGui.QPixmap(thumbnail_path).scaled(512, 512, QtCore.Qt.AspectRatioMode.KeepAspectRatio,
                                                          QtCore.Qt.TransformationMode.SmoothTransformation)
         self.thumbnail.setPixmap(thumbnail)
 
-    def populate_exercise_list(self):
+    def exercise_changed(self, exercise):
+        self.exercise = exercise
+        self.refresh()
+
+    def open_exercise(self, exercise):
+        file_setup.run(data=exercise)
+
+
+class ExerciseTree(QtWidgets.QWidget):
+
+    changed = QtCore.Signal(object)
+    double_clicked = QtCore.Signal(object)
+
+    def __init__(self, exercises, parent=None):
+        super(ExerciseTree, self).__init__(parent)
+        self._exercises = exercises
+
+        self.filter = QtWidgets.QLineEdit()
+        self.exercises = QtWidgets.QListWidget()
+        layout = QtWidgets.QVBoxLayout()
+        layout.addWidget(self.filter)
+        layout.addWidget(self.exercises)
+        self.setLayout(layout)
+
+        self._populate()
+
+        self.exercises.clicked.connect(self._changed_signal)
+        self.exercises.doubleClicked.connect(self._changed_signal)
+
+    def _populate(self):
         for exercise in self._exercises:
             item = QtWidgets.QListWidgetItem(exercise.get("name", "No Name"))
             item.setData(QtCore.Qt.UserRole, exercise)
-            self.exercises_overview.addItem(item)
+            self.exercises.addItem(item)
 
-    def exercise_changed(self):
-        item = self.exercises_overview.currentItem()
-        self.exercise = item.data(QtCore.Qt.UserRole)
-        self.refresh()
+    def _changed_signal(self, item):
+        exercise = item.data(QtCore.Qt.UserRole)
+        self.changed.emit(exercise)
 
-
-    def open_exercise(self):
-        data = self.exercises_overview.currentItem().data(QtCore.Qt.UserRole)
-        print("New Exercise {0}".format(data))
-        file_setup.run(data=data)
+    def _double_clicked(self, item):
+        exercise = item.data(QtCore.Qt.UserRole)
+        self.double_clicked.emit(exercise)
 
 
 app = QtWidgets.QApplication(sys.argv)
