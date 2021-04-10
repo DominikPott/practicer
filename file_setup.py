@@ -5,7 +5,7 @@ import logging
 import glob
 import webbrowser
 
-from config import WORK_DIR, DEFAULT_TEMPLATE, TEMPLATE_DIRECTORY
+from config import WORK_DIR, DEFAULT_TEMPLATE
 
 logging.basicConfig()
 log = logging.getLogger("daily_setup")
@@ -16,12 +16,11 @@ log.setLevel(logging.INFO)
 def create_daily_practice_directory(parent_directory):
     c_date = str(datetime.date.today())
     c_date = c_date.replace("-", "")[2:]
-    print(c_date)
     try:
         practice_dir = os.path.join(parent_directory, c_date)
         os.makedirs(practice_dir)
     except (OSError, WindowsError) as e:
-        log.warning("Could not setup daily practicer directory. {error}".format(error=e))
+        log.debug("Could not setup daily practicer directory. {error}".format(error=e))
     return practice_dir
 
 
@@ -52,29 +51,16 @@ def version_up(path):
     return "{filename}{new_version}{extension}".format(filename=name, new_version=new_version, extension=ext)
 
 
-def choose_template(name):
-    template = [os.path.join(TEMPLATE_DIRECTORY, template_name) for template_name in templates() if name in template_name]
-    if not template:
-        template = [DEFAULT_TEMPLATE]
-    return template[0]
-
-
-def templates():
-    return os.listdir(TEMPLATE_DIRECTORY)
-
-
 def copy_template(src, dst):
     _, ext = os.path.splitext(src)
     shutil.copy2(src, dst+ext)
     return dst+ext
 
 
-if __name__ == '__main__':
+def run(data):
     work_dir = create_daily_practice_directory(parent_directory=WORK_DIR)
-    print("Existing Templates {0}".format(templates()))
-    exercise_name = input('Exercise name: ')
-    template = choose_template(name=exercise_name)
-    dst = unique_filepath(work_dir=work_dir, exercise_name=exercise_name)
+    template = data.get("template", DEFAULT_TEMPLATE)
+    dst = unique_filepath(work_dir=work_dir, exercise_name=data.get("name", "default"))
     work_file = copy_template(src=template, dst=dst)
-    webbrowser.open(work_dir)  # open work dir
+    webbrowser.open(work_dir)
     webbrowser.open(work_file)

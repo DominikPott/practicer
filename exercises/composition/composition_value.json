@@ -1,11 +1,12 @@
 {
-  "name": "value composition",
-  "thumbnail": "Z:\\zeichnungen\\210409\\value_v02.jpg",
+  "name": "composition_value",
+  "thumbnail": ".\\exercises\\composition\\composition_value.jpg",
   "summary": "an exercise in value composition",
   "instruction": "Paint an interesting picture with 3-4 values",
-  "references": "path/to/reference",
+  "references": ["path/to/references"],
   "references_tags": ["value", "composition"],
   "tags": ["value", "composition", "painting"],
   "categories": ["painting", "composition"],
+  "template": ".\\templates\\default.clip",
   "data": {}
 }

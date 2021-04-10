@@ -1,0 +1,12 @@
+{
+  "name": "line_control",
+  "thumbnail": ".\\exercises\\drawing\\line_control.jpg",
+  "summary": "An exercise to practice different drawing lines and circles to improce muscle memory.",
+  "instruction": "Draw lines in the marked areas. Draw perfect circles",
+  "references": ["path/to/references"],
+  "references_tags": ["line", "lineweight", "drawing"],
+  "tags": ["line", "lineweight", "drawing"],
+  "categories": ["drawing"],
+  "template": ".\\templates\\line_control.clip",
+  "data": {}
+}

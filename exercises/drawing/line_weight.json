@@ -1,0 +1,12 @@
+{
+  "name": "line_weight",
+  "thumbnail": ".\\exercises\\drawing\\line_weight.jpg",
+  "summary": "An exercise to practice different lineweights for inside/outside lines.",
+  "instruction": "Paint overlapping objects and assign differnt lineweights to show the form /position / lighting",
+  "references": ["path/to/references"],
+  "references_tags": ["line", "lineweight", "drawing"],
+  "tags": ["line", "lineweight", "drawing"],
+  "categories": ["drawing"],
+  "template": ".\\templates\\lineweight.clip",
+  "data": {}
+}
