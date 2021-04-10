@@ -1,0 +1,12 @@
+{
+  "name": "thumbnail",
+  "thumbnail": ".\\exercises\\masterstudies\\thumbnail.jpg",
+  "summary": "Study Masterpaintings by generating thumbnails",
+  "instruction": "Paint a miniture masterstudy. Focus on Value, Composition, Edges and Color.",
+  "references": ["path/to/references"],
+  "references_tags": ["value", "composition", "painting"],
+  "tags": ["value", "composition", "painting", "edge", "color"],
+  "categories": ["painting", "composition"],
+  "template": ".\\templates\\thumbnail.clip",
+  "data": {}
+}

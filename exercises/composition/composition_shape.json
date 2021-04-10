@@ -7,6 +7,6 @@
   "references_tags": ["shape", "composition"],
   "tags": ["shape", "composition", "design", "graphical"],
   "categories": ["painting", "composition"],
-  "template": ".\\templates\\default.clip",
+  "template": ".\\templates\\composition.clip",
   "data": {}
 }

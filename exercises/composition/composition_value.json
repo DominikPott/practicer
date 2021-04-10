@@ -7,6 +7,6 @@
   "references_tags": ["value", "composition"],
   "tags": ["value", "composition", "painting"],
   "categories": ["painting", "composition"],
-  "template": ".\\templates\\default.clip",
+  "template": ".\\templates\\composition.clip",
   "data": {}
 }

@@ -1,0 +1,12 @@
+{
+  "name": "edges",
+  "thumbnail": ".\\exercises\\painting\\edges.jpg",
+  "summary": "Work on hard and soft edges and or lost and found edges.",
+  "instruction": "Try blending forms with hard and soft edges. . ..",
+  "references": ["path/to/references"],
+  "references_tags": ["painting"],
+  "tags": ["value", "painting", "edge", "color"],
+  "categories": ["painting"],
+  "template": ".\\templates\\edges.clip",
+  "data": {}
+}
