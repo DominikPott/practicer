@@ -13,6 +13,15 @@ log = logging.getLogger("daily_setup")
 log.setLevel(logging.INFO)
 
 
+def run(data):
+    work_dir = create_daily_practice_directory(parent_directory=WORK_DIR)
+    template = get_template(data)
+    dst = unique_filepath(work_dir=work_dir, exercise_name=data.get("name", "default"))
+    work_file = copy_template(src=template, dst=dst)
+    webbrowser.open(work_dir)
+    webbrowser.open(work_file)
+
+
 def create_daily_practice_directory(parent_directory):
     c_date = str(datetime.date.today())
     c_date = c_date.replace("-", "")[2:]
@@ -51,16 +60,15 @@ def version_up(path):
     return "{filename}{new_version}{extension}".format(filename=name, new_version=new_version, extension=ext)
 
 
+def get_template(data):
+    template = data.get("template", DEFAULT_TEMPLATE)
+    if not os.path.exists(template):
+        template = DEFAULT_TEMPLATE
+    return template
+
+
 def copy_template(src, dst):
     _, ext = os.path.splitext(src)
     shutil.copy2(src, dst+ext)
     return dst+ext
 
-
-def run(data):
-    work_dir = create_daily_practice_directory(parent_directory=WORK_DIR)
-    template = data.get("template", DEFAULT_TEMPLATE)
-    dst = unique_filepath(work_dir=work_dir, exercise_name=data.get("name", "default"))
-    work_file = copy_template(src=template, dst=dst)
-    webbrowser.open(work_dir)
-    webbrowser.open(work_file)
