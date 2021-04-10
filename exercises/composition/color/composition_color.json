@@ -1,12 +1,12 @@
 {
   "name": "composition_color",
-  "thumbnail": ".\\exercises\\composition\\composition_color.jpg",
+  "thumbnail": ".\\exercises\\composition\\color\\composition_color.jpg",
   "summary": "An exercise in color composition",
   "instruction": "Paint an interesting picture with 3 different colors.\\nExercise time should be around 5-10 Minutes.",
   "references": ["path/to/references"],
   "references_tags": ["value", "composition"],
   "tags": ["value", "composition", "painting", "fundamental"],
   "categories": ["composition"],
-  "template": ".\\templates\\composition.clip",
+  "template": ".\\exercises\\composition\\color\\composition.clip",
   "data": {}
 }
