@@ -5,7 +5,7 @@
   "instruction": "Paint a simple object and add lights from different directions. These should vary in color and intensity.",
   "references": ["path/to/references"],
   "references_tags": ["light", "painting", "color", "ambient occlusion"],
-  "tags": ["value", "painting", "ambient occlusion"],
+  "tags": ["value", "painting", "ambient occlusion", "fundamental"],
   "categories": ["painting", "ambient occlusion"],
   "template": ".\\templates\\ambient_occlusion.clip",
   "tutorials": ["https://www.drawing.com"],

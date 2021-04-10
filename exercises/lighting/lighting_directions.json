@@ -5,7 +5,7 @@
   "instruction": "Paint a simple object and add lights from different directions. These should vary in color and intensity.",
   "references": ["path/to/references"],
   "references_tags": ["light", "painting", "color"],
-  "tags": ["light", "value", "painting", "color"],
+  "tags": ["light", "value", "painting", "color", "fundamental"],
   "categories": ["painting", "light","color"],
   "template": ".\\templates\\light_scenarios.clip",
   "tutorials": ["https://www.drawing.com"],

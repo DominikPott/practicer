@@ -5,7 +5,7 @@
   "instruction": "Draw lines in the marked areas. Draw perfect circles",
   "references": ["path/to/references"],
   "references_tags": ["line", "lineweight", "drawing"],
-  "tags": ["line", "lineweight", "drawing"],
+  "tags": ["line", "lineweight", "drawing", "fundamental"],
   "categories": ["drawing"],
   "template": ".\\templates\\line_control.clip",
   "data": {}

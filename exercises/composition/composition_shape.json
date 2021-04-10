@@ -5,7 +5,7 @@
   "instruction": "Paint an interesting picture with diffent shapes. (Circles, Boxes, Triangles)",
   "references": ["path/to/references"],
   "references_tags": ["shape", "composition"],
-  "tags": ["shape", "composition", "design", "graphical"],
+  "tags": ["shape", "composition", "design", "graphical", "fundamental"],
   "categories": ["painting", "composition"],
   "template": ".\\templates\\composition.clip",
   "data": {}

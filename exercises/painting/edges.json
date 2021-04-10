@@ -5,7 +5,7 @@
   "instruction": "Try blending forms with hard and soft edges. . ..",
   "references": ["path/to/references"],
   "references_tags": ["painting"],
-  "tags": ["value", "painting", "edge", "color"],
+  "tags": ["value", "painting", "edge", "color", "fundamental"],
   "categories": ["painting"],
   "template": ".\\templates\\edges.clip",
   "data": {}

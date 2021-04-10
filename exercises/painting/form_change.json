@@ -5,7 +5,7 @@
   "instruction": "Study the value / color behaviour of form changes on complex objects. Holes, half_spheres and other transition between objects.",
   "references": ["path/to/references"],
   "references_tags": ["value", "painting"],
-  "tags": ["value", "painting"],
+  "tags": ["value", "painting", "fundamental"],
   "categories": ["painting"],
   "template": ".\\templates\\default.clip",
   "data": {}

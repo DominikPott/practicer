@@ -5,7 +5,7 @@
   "instruction": "Paint an interesting picture with 3-4 values",
   "references": ["path/to/references"],
   "references_tags": ["value", "composition"],
-  "tags": ["value", "composition", "painting"],
+  "tags": ["value", "composition", "painting", "fundamental"],
   "categories": ["painting", "composition"],
   "template": ".\\templates\\composition.clip",
   "data": {}

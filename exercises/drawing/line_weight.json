@@ -5,7 +5,7 @@
   "instruction": "Paint overlapping objects and assign differnt lineweights to show the form /position / lighting",
   "references": ["path/to/references"],
   "references_tags": ["line", "lineweight", "drawing"],
-  "tags": ["line", "lineweight", "drawing"],
+  "tags": ["line", "lineweight", "drawing", "fundamental"],
   "categories": ["drawing"],
   "template": ".\\templates\\lineweight.clip",
   "data": {}

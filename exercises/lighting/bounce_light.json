@@ -6,7 +6,7 @@
   "references": ["path/to/references"],
   "references_tags": ["light", "painting", "color", "bounce light"],
   "tags": ["value", "painting", "bounce light", "color"],
-  "categories": ["painting", "color", "light"],
+  "categories": ["painting", "color", "light", "fundamental"],
   "template": ".\\templates\\bounce_light.clip",
   "tutorials": ["https://www.drawing.com"],
   "data": {}
