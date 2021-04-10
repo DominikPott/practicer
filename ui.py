@@ -68,22 +68,50 @@ class ExerciseTree(QtWidgets.QWidget):
         self._exercises = exercises
 
         self.filter = QtWidgets.QLineEdit()
-        self.exercises = QtWidgets.QListWidget()
+        self.exercises_widget = QtWidgets.QListWidget()
         layout = QtWidgets.QVBoxLayout()
         layout.addWidget(self.filter)
-        layout.addWidget(self.exercises)
+        layout.addWidget(self.exercises_widget)
         self.setLayout(layout)
+
+        self.filter.setPlaceholderText("tag filter")
 
         self._populate()
 
-        self.exercises.clicked.connect(self._changed_signal)
-        self.exercises.doubleClicked.connect(self._changed_signal)
+        self.filter.textChanged.connect(self._populate)
+        self.exercises_widget.clicked.connect(self._changed_signal)
+        self.exercises_widget.doubleClicked.connect(self._double_clicked)
+
+    def exercise_tags(self):
+        tags = []
+        for exercise in self._exercises:
+            tags.extend(exercise.get("tags", []))
+        return set(tags)
+
+    def _filter_exercises_by_tag(self, exercises):
+        filters = self.filter.text().split()
+        if not filters:
+            return exercises
+        filtered = []
+        for e in exercises:
+            filtered.extend(self.filter_exercise_by_tag(e, filters))
+        return filtered
+
+    @staticmethod
+    def filter_exercise_by_tag(exercise, tags):
+        for filter_tag in tags:
+            for tag in exercise.get("tags", []):
+                if filter_tag in tag:
+                    return [exercise]
+        return []
 
     def _populate(self):
-        for exercise in self._exercises:
+        self.exercises_widget.clear()
+        filtered = self._filter_exercises_by_tag(self._exercises)
+        for exercise in filtered:
             item = QtWidgets.QListWidgetItem(exercise.get("name", "No Name"))
             item.setData(QtCore.Qt.UserRole, exercise)
-            self.exercises.addItem(item)
+            self.exercises_widget.addItem(item)
 
     def _changed_signal(self, item):
         exercise = item.data(QtCore.Qt.UserRole)
