@@ -19,7 +19,7 @@ class PractiseApp(QtWidgets.QMainWindow):
         self.exercises_overview.setFixedWidth(200)
 
         self.thumbnail = QtWidgets.QLabel()
-        self.thumbnail.setFixedSize(640, 400)
+        self.thumbnail.setMinimumSize(640, 400)
         self.summary = QtWidgets.QLabel()
         self.summary.setFont(QtGui.QFont("Times", 12, QtGui.QFont.Bold))
         self.summary.setAlignment(QtCore.Qt.AlignCenter)
@@ -59,6 +59,7 @@ class PractiseApp(QtWidgets.QMainWindow):
         thumbnail = QtGui.QPixmap(thumbnail_path).scaled(640, 400, QtCore.Qt.AspectRatioMode.KeepAspectRatio,
                                                          QtCore.Qt.TransformationMode.SmoothTransformation)
         self.thumbnail.setPixmap(thumbnail)
+        self.thumbnail.setScaledContents(True)
 
     def exercise_changed(self, exercise):
         self.exercise = exercise
