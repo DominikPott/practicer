@@ -1,12 +1,13 @@
 {
   "name": "form_change",
-  "thumbnail": ".\\exercises\\painting\\form_change.jpg",
+  "label": "Form Change",
+  "thumbnail": ".\\exercises\\painting\\form_change\\form_change.jpg",
   "summary": "Paint objects which have complex form changes and shade them accordingly.",
   "instruction": "Study the value / color behaviour of form changes on complex objects. Holes, half_spheres and other transition between objects.",
   "references": ["path/to/references"],
   "references_tags": ["value", "painting"],
   "tags": ["value", "painting", "fundamental"],
   "categories": ["painting"],
-  "template": ".\\templates\\default.clip",
+  "template": ".\\exercises\\painting\\form_change\\form_change.clip",
   "data": {}
 }

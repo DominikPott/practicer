@@ -19,21 +19,28 @@ class PractiseApp(QtWidgets.QMainWindow):
         self.exercises_overview.setFixedWidth(200)
 
         self.thumbnail = QtWidgets.QLabel()
-        self.thumbnail.setMinimumSize(640, 400)
+        self.thumbnail.setMinimumSize(640, 360)
         self.summary = QtWidgets.QLabel()
-        self.summary.setFont(QtGui.QFont("Times", 12, QtGui.QFont.Bold))
         self.summary.setAlignment(QtCore.Qt.AlignCenter)
         self.summary.setFixedHeight(50)
+        font = QtGui.QFont("Times", 12, QtGui.QFont.DemiBold)
+        font.setCapitalization(QtGui.QFont.Capitalize)
+        self.summary.setFont(font)
+
+        self.instructionsGroup = QtWidgets.QGroupBox("Instructions:")
         self.instruction = QtWidgets.QLabel()
         self.instruction.setMinimumHeight(100)
         self.instruction.setAlignment(QtCore.Qt.AlignCenter)
         self.instruction.setFont(QtGui.QFont("Times", 10))
         self.instruction.setWordWrap(True)
+        self.instructionsLayout = QtWidgets.QVBoxLayout()
+        self.instructionsLayout.addWidget(self.instruction)
+        self.instructionsGroup.setLayout(self.instructionsLayout)
 
         self.previewLayout = QtWidgets.QVBoxLayout()
         self.previewLayout.addWidget(self.summary)
         self.previewLayout.addWidget(self.thumbnail)
-        self.previewLayout.addWidget(self.instruction)
+        self.previewLayout.addWidget(self.instructionsGroup)
 
         self.previewWidget = QtWidgets.QWidget()
         self.previewWidget.setLayout(self.previewLayout)
@@ -50,13 +57,13 @@ class PractiseApp(QtWidgets.QMainWindow):
         self.refresh()
 
     def refresh(self):
-        self.summary.setText(self.exercise.get("summary", "No Summary"))
+        self.summary.setText(self.exercise.get("label", "No Label") + ": " + self.exercise.get("summary", "No Summary"))
         self.instruction.setText(self.exercise.get("instruction", "No Instructions"))
         self._update_thumbnail()
 
     def _update_thumbnail(self):
         thumbnail_path = self.exercise.get("thumbnail", "")
-        thumbnail = QtGui.QPixmap(thumbnail_path).scaled(640, 400, QtCore.Qt.AspectRatioMode.KeepAspectRatio,
+        thumbnail = QtGui.QPixmap(thumbnail_path).scaled(640, 360, QtCore.Qt.AspectRatioMode.KeepAspectRatio,
                                                          QtCore.Qt.TransformationMode.SmoothTransformation)
         self.thumbnail.setPixmap(thumbnail)
         self.thumbnail.setScaledContents(True)

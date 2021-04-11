@@ -1,5 +1,6 @@
 {
   "name": "composition_value",
+  "label": "Composition Value",
   "thumbnail": ".\\exercises\\composition\\value\\composition_value.jpg",
   "summary": "an exercise in value composition",
   "instruction": "Paint an interesting picture with 3-4 values",

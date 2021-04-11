@@ -1,5 +1,6 @@
 {
   "name": "composition_shape",
+  "label": "Composition Shape",
   "thumbnail": ".\\exercises\\composition\\shape\\composition_shape.jpg",
   "summary": "an exercise in shape composition and form language",
   "instruction": "Paint an interesting picture with diffent shapes. (Circles, Boxes, Triangles)",

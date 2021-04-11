@@ -1,5 +1,6 @@
 {
   "name": "bounce_light",
+  "label": "Bounce Light",
   "thumbnail": ".\\exercises\\lighting\\bounce_light\\bounce_light.jpg",
   "summary": "Paint the effect of light bouncing of objects and onto others.",
   "instruction": "Paint the effect of light bouncing of objects and onto others.",

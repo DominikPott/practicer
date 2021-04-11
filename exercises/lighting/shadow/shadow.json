@@ -1,5 +1,6 @@
 {
   "name": "shadow",
+  "label": "Shadow Construction",
   "thumbnail": ".\\exercises\\lighting\\shadow\\shadow.jpg",
   "summary": "Construct shadows for simple and complex objects.",
   "instruction": "Construct the shadow of simple grids and sticks. These can be cast on other objects. Try different lights to see the effect of hard or soft shadows.",

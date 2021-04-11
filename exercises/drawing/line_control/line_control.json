@@ -1,5 +1,6 @@
 {
   "name": "line_control",
+  "label": "Line Control",
   "thumbnail": ".\\exercises\\drawing\\line_control\\line_control.jpg",
   "summary": "An exercise to practice different drawing lines and circles to improce muscle memory.",
   "instruction": "Draw lines in the marked areas. Draw perfect circles",

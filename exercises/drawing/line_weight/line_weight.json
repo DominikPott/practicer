@@ -1,5 +1,6 @@
 {
   "name": "line_weight",
+  "label": "Line Weight",
   "thumbnail": ".\\exercises\\drawing\\line_weight\\line_weight.jpg",
   "summary": "An exercise to practice different lineweights for inside/outside lines.",
   "instruction": "Paint overlapping objects and assign differnt lineweights to show the form /position / lighting",
