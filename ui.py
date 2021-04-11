@@ -57,7 +57,7 @@ class PractiseApp(QtWidgets.QMainWindow):
         self.refresh()
 
     def refresh(self):
-        self.summary.setText(self.exercise.get("label", "No Label") + ": " + self.exercise.get("summary", "No Summary"))
+        self.summary.setText(self.exercise.get("label", "No Label"))
         self.instruction.setText(self.exercise.get("instruction", "No Instructions"))
         self._update_thumbnail()
 
@@ -86,6 +86,7 @@ class ExerciseTree(QtWidgets.QWidget):
         self._exercises = exercises
 
         self.filter = QtWidgets.QLineEdit()
+        self.filter.setPlaceholderText("tag filter")
         self.exercises_widget = QtWidgets.QTreeWidget()
         self.exercises_widget.setHeaderHidden(True)
 
@@ -93,8 +94,6 @@ class ExerciseTree(QtWidgets.QWidget):
         layout.addWidget(self.filter)
         layout.addWidget(self.exercises_widget)
         self.setLayout(layout)
-
-        self.filter.setPlaceholderText("tag filter")
 
         self._populate()
 
@@ -131,13 +130,13 @@ class ExerciseTree(QtWidgets.QWidget):
 
         sections = {}
         for exercise in filtered:
-            categorie = exercise.get('categories', ["uncategoriezed"])[0]
+            categorie = exercise.get('categories', ["uncategoriezed"])[0].title()
             sections.setdefault(categorie, []).append(exercise)
 
         for section, exercises in sections.items():
             section_item = QtWidgets.QTreeWidgetItem(self.exercises_widget, [section])
             for exercise in exercises:
-                name = exercise.get("name", "no name")
+                name = exercise.get("label", "No Label").title()
                 item = QtWidgets.QTreeWidgetItem(section_item, [name])
                 item.setData(0, QtCore.Qt.UserRole, exercise)
         self.exercises_widget.expandAll()
