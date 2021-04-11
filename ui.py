@@ -11,6 +11,7 @@ class PractiseApp(QtWidgets.QMainWindow):
     def __init__(self, exercises, parent=None):
         super(PractiseApp, self).__init__(parent)
         self.setWindowTitle("Practicer")
+        self.setStyleSheet(load_stylesheed())
         self._exercises = exercises
         self.exercise = self._exercises[0]
 
@@ -146,6 +147,13 @@ class ExerciseTree(QtWidgets.QWidget):
         exercise = item.data(0, QtCore.Qt.UserRole)
         if exercise:
             self.double_clicked.emit(exercise)
+
+
+def load_stylesheed():
+    path = r".\stylesheets\darkorange.qss"
+    with open(path, "r") as s:
+        stylesheet = s.read()
+    return stylesheet
 
 
 app = QtWidgets.QApplication(sys.argv)
