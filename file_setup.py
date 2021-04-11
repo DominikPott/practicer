@@ -18,7 +18,6 @@ def run(data):
     template = get_template(data)
     dst = unique_filepath(work_dir=work_dir, exercise_name=data.get("name", "default"))
     work_file = copy_template(src=template, dst=dst)
-    webbrowser.open(work_dir)
     webbrowser.open(work_file)
 
 
