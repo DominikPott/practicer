@@ -1,13 +1,12 @@
 {
   "name": "value",
   "label": "Value",
-  "thumbnail": ".\\exercises\\painting\\value\\value.jpg",
-  "summary": "Paint basic and simple freeform Objects.",
-  "instruction": "Paint imaginative or refernced simple objects and studie the values.",
-  "references": ["path/to/references"],
-  "references_tags": ["value", "painting", "color"],
-  "tags": ["value", "painting", "edge", "color", "fundamental"],
+  "tags": ["value", "painting", "edge", "color", "fundamental", "shading"],
   "categories": ["painting"],
+  "thumbnail": ".\\exercises\\painting\\value\\value.jpg",
   "template": ".\\exercises\\painting\\value\\value.jpg",
-  "data": {}
+  "instruction": "Paint imaginative or refernced simple objects and studie the values.",
+  "hyperlinks": ["https://www.deviantart.com/nsio/art/Nsio-Explains-Shading-Basics-647268365"],
+  "references": ["path/to/references"],
+  "references_tags": ["value", "painting", "color"]
 }

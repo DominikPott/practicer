@@ -1,14 +1,12 @@
 {
   "name": "materials",
   "label": "Materials",
+  "tags": ["value", "painting", "edge", "color", "shading", "fundamental"],
+  "categories": ["painting"],
   "thumbnail": ".\\exercises\\painting\\materials\\materials.jpg",
-  "summary": "Construct shadows for simple and complex objects.",
+  "template": ".\\exercises\\painting\\materials\\materials.clip",
   "instruction": "Construct the shadow of simple grids and sticks. These can be cast on other objects. Try different lights to see the effect of hard or soft shadows.",
   "references": ["path/to/references"],
   "references_tags": ["light", "painting", "color"],
-  "tags": ["value", "painting", "edge", "color", "fundamental"],
-  "categories": ["painting"],
-  "template": ".\\exercises\\painting\\materials\\materials.clip",
-  "tutorials": ["https://www.drawing.com"],
-  "data": {}
+  "tutorials": ["https://www.drawing.com"]
 }

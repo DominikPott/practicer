@@ -1,14 +1,12 @@
 {
   "name": "exposure",
   "label": "Exposure",
-  "thumbnail": ".\\exercises\\lighting\\exposure.jpg",
-  "summary": "Paint a scene in low or high key.",
-  "instruction": "Choose under or overexposed and adjust the values and colors on the objects accordingly.",
-  "references": ["path/to/references"],
-  "references_tags": ["light", "painting", "color", "exposure"],
   "tags": ["value", "painting", "exposure", "color", "fundamental"],
-  "categories": ["color"],
-  "template": ".\\templates\\light_scenarios.clip",
-  "tutorials": ["https://www.drawing.com"],
-  "data": {}
+  "categories": ["light"],
+  "thumbnail": ".\\exercises\\lighting\\exposure\\exposure.jpg",
+  "template": ".\\exercises\\lighting\\exposure\\exposure.clip",
+  "instruction": "Choose under or overexposed and adjust the values and colors on the objects accordingly.",
+  "hyperlinks": ["https://www.drawing.com"],
+  "references": ["path/to/references"],
+  "references_tags": ["light", "painting", "color", "exposure"]
 }

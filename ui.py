@@ -37,10 +37,19 @@ class PractiseApp(QtWidgets.QMainWindow):
         self.instructionsLayout.addWidget(self.instruction)
         self.instructionsGroup.setLayout(self.instructionsLayout)
 
+        self.linksGroup = QtWidgets.QGroupBox("Links:")
+        self.links = QtWidgets.QLabel()
+        self.links.setAlignment(QtCore.Qt.AlignCenter)
+        self.links.setOpenExternalLinks(True)
+        self.linksLayout = QtWidgets.QVBoxLayout()
+        self.linksLayout.addWidget(self.links)
+        self.linksGroup.setLayout(self.linksLayout)
+
         self.previewLayout = QtWidgets.QVBoxLayout()
         self.previewLayout.addWidget(self.summary)
         self.previewLayout.addWidget(self.thumbnail)
         self.previewLayout.addWidget(self.instructionsGroup)
+        self.previewLayout.addWidget(self.linksGroup)
 
         self.previewWidget = QtWidgets.QWidget()
         self.previewWidget.setLayout(self.previewLayout)
@@ -59,7 +68,13 @@ class PractiseApp(QtWidgets.QMainWindow):
     def refresh(self):
         self.summary.setText(self.exercise.get("label", "No Label"))
         self.instruction.setText(self.exercise.get("instruction", "No Instructions"))
+        self.links.setText(self._format_hyperlinks())
         self._update_thumbnail()
+
+    def _format_hyperlinks(self):
+        links = self.exercise.get("hyperlinks", [""])
+        formated_links = ["<a href='{link}' style='color: gray;'>{short_link}</a >".format(link=link, short_link=link[:30]) for link in links]
+        return " | ".join(formated_links)
 
     def _update_thumbnail(self):
         thumbnail_path = self.exercise.get("thumbnail", "")
