@@ -1,13 +1,13 @@
 {
   "name": "composition_value",
   "label": "Composition Value",
-  "thumbnail": ".\\exercises\\composition\\value\\composition_value.jpg",
-  "summary": "an exercise in value composition",
-  "instruction": "Paint an interesting picture with 3-4 values",
-  "references": ["path/to/references"],
-  "references_tags": ["value", "composition"],
+  "level": 2.0,
   "tags": ["value", "composition", "painting", "fundamental"],
   "categories": ["composition"],
+  "thumbnail": ".\\exercises\\composition\\value\\composition_value.jpg",
   "template": ".\\exercises\\composition\\value\\composition.clip",
-  "data": {}
+  "instruction": "Paint an interesting picture with 3-4 values",
+  "hyperlinks": [],
+  "references": ["path/to/references"],
+  "references_tags": ["value", "composition"]
 }

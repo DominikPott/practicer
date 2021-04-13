@@ -1,14 +1,13 @@
 {
   "name": "light_schema",
   "label": "Light Schema",
-  "thumbnail": ".\\exercises\\lighting\\light_schemas\\light_schemas.jpg",
-  "summary": "Paint different light types on simple forms. Key, Fill, Bounce, . ..",
-  "instruction": "Paint a simple object and add lights from different directions. These should vary in color and intensity.",
-  "references": ["path/to/references"],
-  "references_tags": ["light", "painting", "color"],
+  "level": 3.0,
   "tags": ["light", "value", "painting", "color", "fundamental"],
   "categories": ["light"],
+  "thumbnail": ".\\exercises\\lighting\\light_schemas\\light_schemas.jpg",
   "template": ".\\exercises\\lighting\\light_schemas\\light_schemas.clip",
-  "tutorials": ["https://www.drawing.com"],
-  "data": {}
+  "instruction": "Paint different light types on simple forms. Key, Fill, Bounce, . .. Paint a simple object and add lights from different directions. These should vary in color and intensity.",
+  "references": ["path/to/references"],
+  "references_tags": ["light", "painting", "color"],
+  "hyperlinks": []
 }

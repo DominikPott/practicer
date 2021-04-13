@@ -1,6 +1,7 @@
 {
   "name": "value",
   "label": "Value",
+  "level": 2.0,
   "tags": ["value", "painting", "edge", "color", "fundamental", "shading"],
   "categories": ["painting"],
   "thumbnail": ".\\exercises\\painting\\value\\value.jpg",
