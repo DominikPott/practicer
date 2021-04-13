@@ -54,9 +54,13 @@ class PractiseApp(QtWidgets.QMainWindow):
         self.previewWidget = QtWidgets.QWidget()
         self.previewWidget.setLayout(self.previewLayout)
 
+        images = _tmp_reference_images()
+        self.referenceWidget = ReferenceWidget(references=images)
+
         self.mainLayout = QtWidgets.QHBoxLayout()
         self.mainLayout.addWidget(self.exercises_overview)
         self.mainLayout.addWidget(self.previewWidget)
+        self.mainLayout.addWidget(self.referenceWidget)
         central_widget = QtWidgets.QWidget()
         central_widget.setLayout(self.mainLayout)
         self.setCentralWidget(central_widget)
@@ -171,12 +175,59 @@ class ExerciseTree(QtWidgets.QWidget):
             self.double_clicked.emit(exercise)
 
 
+class ReferenceWidget(QtWidgets.QWidget):
+    def __init__(self, references=[], parent=None):
+        super(ReferenceWidget, self).__init__(parent=parent)
+        self.references = references
+        self.setLayout(QtWidgets.QVBoxLayout())
+        self.setMaximumWidth(320)
+        self.setMinimumHeight(180*4)
+        self.refresh_button = QtWidgets.QPushButton("Random")
+        self.layout().addWidget(self.refresh_button)
+        self.thumbnails = []
+        self.randomize_images()
+        self.populate_thumbnails()
+        self.refresh_button.clicked.connect(self.new_images)
+
+    def randomize_images(self):
+        import random
+        random.shuffle(self.references)
+
+    def populate_thumbnails(self):
+        self._clear()
+        for reference in self.references[:3]:
+            image_container = QtWidgets.QLabel()
+            thumbnail = QtGui.QPixmap(reference).scaled(320, 180, QtCore.Qt.AspectRatioMode.KeepAspectRatioByExpanding,
+                                                              QtCore.Qt.TransformationMode.SmoothTransformation)
+            image_container.setPixmap(thumbnail)
+            image_container.setScaledContents(True)
+            image_container.setSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+            self.layout().addWidget(image_container)
+            self.thumbnails.append(image_container)
+
+    def _clear(self):
+        for widget in self.thumbnails:
+            self.layout().removeWidget(widget)
+            widget.destroy()
+        self.thumbnails = []
+
+    def new_images(self):
+        self.randomize_images()
+        self.populate_thumbnails()
+
+
 def load_stylesheed():
     path = r".\stylesheets\darkorange.qss"
     with open(path, "r") as s:
         stylesheet = s.read()
     return stylesheet
 
+def _tmp_reference_images():
+    import os
+    path = r"Z:\referenzen\Fashion"
+    images = os.listdir(path)
+    images = [os.path.join(path, image) for image in images]
+    return images
 
 app = QtWidgets.QApplication(sys.argv)
 w = PractiseApp(exercises=exercises.exercises())
