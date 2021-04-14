@@ -5,6 +5,7 @@ class ReferenceWidget(QtWidgets.QWidget):
     def __init__(self, references=[], parent=None):
         super(ReferenceWidget, self).__init__(parent=parent)
         self.references = references
+        self.thumbnails = []
         self.setLayout(QtWidgets.QVBoxLayout())
         self.setMaximumWidth(320)
         self.setMaximumHeight(180*4)
@@ -20,6 +21,7 @@ class ReferenceWidget(QtWidgets.QWidget):
         random.shuffle(self.references)
 
     def _populate_thumbnails(self):
+        self._clear()
         for reference in self.references[:3]:
             image_container = QtWidgets.QLabel()
             image = QtGui.QImage(reference)
@@ -29,4 +31,11 @@ class ReferenceWidget(QtWidgets.QWidget):
             image_container.setScaledContents(True)
             image_container.setSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
             self.layout().addWidget(image_container)
+            self.thumbnails.append(image_container)
+
+    def _clear(self):
+        for image_container in self.thumbnails:
+            self.layout().removeWidget(image_container)
+            image_container.clear()
+        self.thumbnails = []
 
