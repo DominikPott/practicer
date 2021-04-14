@@ -1,6 +1,6 @@
 {
-  "name": "light_schema",
-  "label": "Light Schema",
+  "name": "light_schemas",
+  "label": "Light Schemas",
   "level": 3.0,
   "tags": ["light", "value", "painting", "color", "fundamental"],
   "categories": ["light"],
