@@ -2,6 +2,7 @@ import random
 
 from PIL import Image, ExifTags
 
+
 def get_image_tags(image):
     img = Image.open(image)
     img_exif = img.getexif()
@@ -15,6 +16,7 @@ def get_image_tags(image):
     tags = tags.replace("\x00", "")
     tags = tags.split(";")
     return tags
+
 
 if __name__ == "__main__":
     import os

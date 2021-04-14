@@ -11,88 +11,26 @@ class PractiseApp(QtWidgets.QMainWindow):
         super(PractiseApp, self).__init__(parent)
         self.setWindowTitle("Practicer")
         self.setStyleSheet(load_stylesheed())
+
+        self.setCentralWidget(QtWidgets.QWidget())
+        self.mainLayout = QtWidgets.QHBoxLayout()
+        self.centralWidget().setLayout(self.mainLayout)
+
         self._exercises = exercises
         self.exercise = self._exercises[0]
 
         self.exercises_overview = ExerciseTree(exercises=self._exercises)
         self.exercises_overview.setFixedWidth(200)
+        self.exercise_details = ExerciseDetails(exercise=self.exercise)
+        self.referenceWidget = ReferenceWidget(references=api.references_images(exercise=self.exercise))
 
-        self.thumbnail = QtWidgets.QLabel()
-        self.thumbnail.setMinimumSize(640, 360)
-        self.summary = QtWidgets.QLabel()
-        self.summary.setAlignment(QtCore.Qt.AlignCenter)
-        self.summary.setFixedHeight(50)
-        font = QtGui.QFont("Times", 12, QtGui.QFont.DemiBold)
-        font.setCapitalization(QtGui.QFont.Capitalize)
-        self.summary.setFont(font)
-
-        self.instructionsGroup = QtWidgets.QGroupBox("Instructions:")
-        self.instruction = QtWidgets.QLabel()
-        self.instruction.setMinimumHeight(100)
-        self.instruction.setAlignment(QtCore.Qt.AlignCenter)
-        self.instruction.setFont(QtGui.QFont("Times", 10))
-        self.instruction.setWordWrap(True)
-        self.instructionsLayout = QtWidgets.QVBoxLayout()
-        self.instructionsLayout.addWidget(self.instruction)
-        self.instructionsGroup.setLayout(self.instructionsLayout)
-
-        self.linksGroup = QtWidgets.QGroupBox("Links:")
-        self.links = QtWidgets.QLabel()
-        self.links.setAlignment(QtCore.Qt.AlignCenter)
-        self.links.setOpenExternalLinks(True)
-        self.linksLayout = QtWidgets.QVBoxLayout()
-        self.linksLayout.addWidget(self.links)
-        self.linksGroup.setLayout(self.linksLayout)
-
-        self.previewLayout = QtWidgets.QVBoxLayout()
-        self.previewLayout.addWidget(self.summary)
-        self.previewLayout.addWidget(self.thumbnail)
-        self.previewLayout.addWidget(self.instructionsGroup)
-        self.previewLayout.addWidget(self.linksGroup)
-
-        self.previewWidget = QtWidgets.QWidget()
-        self.previewWidget.setLayout(self.previewLayout)
-
-        images = _tmp_reference_images()
-        self.referenceWidget = ReferenceWidget(references=images)
-
-        self.mainLayout = QtWidgets.QHBoxLayout()
         self.mainLayout.addWidget(self.exercises_overview)
-        self.mainLayout.addWidget(self.previewWidget)
+        self.mainLayout.addWidget(self.exercise_details)
         self.mainLayout.addWidget(self.referenceWidget)
-        central_widget = QtWidgets.QWidget()
-        central_widget.setLayout(self.mainLayout)
-        self.setCentralWidget(central_widget)
 
-        self.exercises_overview.changed.connect(self.exercise_changed)
-        self.exercises_overview.double_clicked.connect(self.open_exercise)
-        self.refresh()
+        self.exercises_overview.changed.connect(self.exercise_details.refresh)
+        self.exercises_overview.double_clicked.connect(api.create)
 
-    def refresh(self):
-        self.summary.setText(self.exercise.get("label", "No Label"))
-        self.instruction.setText(self.exercise.get("instruction", "No Instructions"))
-        self.links.setText(self._format_hyperlinks())
-        self._update_thumbnail()
-
-    def _format_hyperlinks(self):
-        links = self.exercise.get("hyperlinks", [""])
-        formated_links = ["<a href='{link}' style='color: gray;'>{short_link}</a >".format(link=link, short_link=link[:30]) for link in links]
-        return " | ".join(formated_links)
-
-    def _update_thumbnail(self):
-        thumbnail_path = self.exercise.get("thumbnail", "")
-        thumbnail = QtGui.QPixmap(thumbnail_path).scaled(640, 360, QtCore.Qt.AspectRatioMode.KeepAspectRatio,
-                                                         QtCore.Qt.TransformationMode.SmoothTransformation)
-        self.thumbnail.setPixmap(thumbnail)
-        self.thumbnail.setScaledContents(True)
-
-    def exercise_changed(self, exercise):
-        self.exercise = exercise
-        self.refresh()
-
-    @staticmethod
-    def open_exercise(exercise):
-        api.create(exercise)
 
 
 class ExerciseTree(QtWidgets.QWidget):
@@ -175,6 +113,71 @@ class ExerciseTree(QtWidgets.QWidget):
             self.double_clicked.emit(exercise)
 
 
+class ExerciseDetails(QtWidgets.QWidget):
+
+    def __init__(self, exercise, parent=None):
+        super(ExerciseDetails, self).__init__(parent)
+
+        self.exercise = exercise
+        self.thumbnail = QtWidgets.QLabel()
+        self.thumbnail.setMinimumSize(640, 360)
+
+        self.summary = QtWidgets.QLabel()
+        self.summary.setAlignment(QtCore.Qt.AlignCenter)
+        self.summary.setFixedHeight(50)
+        font = QtGui.QFont("Times", 12, QtGui.QFont.DemiBold)
+        font.setCapitalization(QtGui.QFont.Capitalize)
+        self.summary.setFont(font)
+
+        self.instructionsGroup = QtWidgets.QGroupBox("Instructions:")
+        self.instruction = QtWidgets.QLabel()
+        self.instruction.setMinimumHeight(100)
+        self.instruction.setAlignment(QtCore.Qt.AlignCenter)
+        self.instruction.setFont(QtGui.QFont("Times", 10))
+        self.instruction.setWordWrap(True)
+        self.instructionsLayout = QtWidgets.QVBoxLayout()
+        self.instructionsLayout.addWidget(self.instruction)
+        self.instructionsGroup.setLayout(self.instructionsLayout)
+
+        self.linksGroup = QtWidgets.QGroupBox("Links:")
+        self.links = QtWidgets.QLabel()
+        self.links.setAlignment(QtCore.Qt.AlignCenter)
+        self.links.setOpenExternalLinks(True)
+        self.links.setMaximumHeight(80)
+        self.linksLayout = QtWidgets.QVBoxLayout()
+        self.linksLayout.addWidget(self.links)
+        self.linksGroup.setLayout(self.linksLayout)
+
+        self.setLayout(QtWidgets.QVBoxLayout())
+        self.layout().addWidget(self.summary)
+        self.layout().addWidget(self.thumbnail)
+        self.layout().addWidget(self.instructionsGroup)
+        self.layout().addWidget(self.linksGroup)
+        self._refresh()
+
+    def _refresh(self):
+        self.summary.setText(self.exercise.get("label", "No Label"))
+        self.instruction.setText(self.exercise.get("instruction", "No Instructions"))
+        self.links.setText(self._format_hyperlinks())
+        self._update_thumbnail()
+
+    def _format_hyperlinks(self):
+        links = self.exercise.get("hyperlinks", [""])
+        formated_links = ["<a href='{link}' style='color: gray;'>{short_link}</a >".format(link=link, short_link=link[:30]) for link in links]
+        return " | ".join(formated_links)
+
+    def _update_thumbnail(self):
+        thumbnail_path = self.exercise.get("thumbnail", "")
+        thumbnail = QtGui.QPixmap(thumbnail_path).scaled(640, 360, QtCore.Qt.AspectRatioMode.KeepAspectRatio,
+                                                         QtCore.Qt.TransformationMode.SmoothTransformation)
+        self.thumbnail.setPixmap(thumbnail)
+        self.thumbnail.setScaledContents(True)
+
+    def refresh(self, exercise):
+        self.exercise = exercise
+        self._refresh()
+
+
 class ReferenceWidget(QtWidgets.QWidget):
     def __init__(self, references=[], parent=None):
         super(ReferenceWidget, self).__init__(parent=parent)
@@ -197,7 +200,8 @@ class ReferenceWidget(QtWidgets.QWidget):
         self._clear()
         for reference in self.references[:3]:
             image_container = QtWidgets.QLabel()
-            thumbnail = QtGui.QPixmap(reference).scaled(320, 180, QtCore.Qt.AspectRatioMode.KeepAspectRatioByExpanding,
+            image = QtGui.QImage(reference)
+            thumbnail = QtGui.QPixmap.fromImage(image).scaled(320, 180, QtCore.Qt.AspectRatioMode.KeepAspectRatio,
                                                               QtCore.Qt.TransformationMode.SmoothTransformation)
             image_container.setPixmap(thumbnail)
             image_container.setScaledContents(True)
@@ -221,14 +225,6 @@ def load_stylesheed():
     with open(path, "r") as s:
         stylesheet = s.read()
     return stylesheet
-
-
-def _tmp_reference_images():
-    import os
-    path = r"Z:\referenzen\Fashion"
-    images = os.listdir(path)
-    images = [os.path.join(path, image) for image in images]
-    return images
 
 
 app = QtWidgets.QApplication(sys.argv)
