@@ -13,7 +13,7 @@ log = logging.getLogger("daily_setup")
 log.setLevel(logging.INFO)
 
 
-def run(data):
+def create(data):
     work_dir = create_daily_practice_directory(parent_directory=WORK_DIR)
     template = get_template(data)
     dst = unique_filepath(work_dir=work_dir, exercise_name=data.get("name", "default"))

@@ -2,8 +2,7 @@ import sys
 
 from PySide6 import QtWidgets, QtCore, QtGui
 
-import exercises
-import file_setup
+import api
 
 
 class PractiseApp(QtWidgets.QMainWindow):
@@ -91,8 +90,9 @@ class PractiseApp(QtWidgets.QMainWindow):
         self.exercise = exercise
         self.refresh()
 
-    def open_exercise(self, exercise):
-        file_setup.run(data=exercise)
+    @staticmethod
+    def open_exercise(exercise):
+        api.create(exercise)
 
 
 class ExerciseTree(QtWidgets.QWidget):
@@ -181,7 +181,7 @@ class ReferenceWidget(QtWidgets.QWidget):
         self.references = references
         self.setLayout(QtWidgets.QVBoxLayout())
         self.setMaximumWidth(320)
-        self.setMinimumHeight(180*4)
+        self.setMaximumHeight(180*4)
         self.refresh_button = QtWidgets.QPushButton("Random")
         self.layout().addWidget(self.refresh_button)
         self.thumbnails = []
@@ -222,6 +222,7 @@ def load_stylesheed():
         stylesheet = s.read()
     return stylesheet
 
+
 def _tmp_reference_images():
     import os
     path = r"Z:\referenzen\Fashion"
@@ -229,7 +230,8 @@ def _tmp_reference_images():
     images = [os.path.join(path, image) for image in images]
     return images
 
+
 app = QtWidgets.QApplication(sys.argv)
-w = PractiseApp(exercises=exercises.exercises())
+w = PractiseApp(exercises=api.exercises())
 w.show()
 sys.exit(app.exec_())
