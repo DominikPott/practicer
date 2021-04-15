@@ -64,6 +64,7 @@ class ExerciseTree(QtWidgets.QWidget):
                 name = exercise.get("label", "No Label").title()
                 item = QtWidgets.QTreeWidgetItem(section_item, [name])
                 item.setData(0, QtCore.Qt.UserRole, exercise)
+                item.setToolTip(0, " | ".join(exercise.get("tags", [])))
         self.exercises_widget.expandAll()
         self.exercises_widget.setItemsExpandable(False)
         self.exercises_widget.setRootIsDecorated(False)

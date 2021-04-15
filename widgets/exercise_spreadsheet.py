@@ -36,17 +36,28 @@ class ExerciseSpreadSheet(QtWidgets.QWidget):
         self.linksLayout.addWidget(self.links)
         self.linksGroup.setLayout(self.linksLayout)
 
+        self.statsGroup = QtWidgets.QGroupBox("Stats:")
+        self.stats = QtWidgets.QLabel()
+
+        self.stats.setAlignment(QtCore.Qt.AlignVCenter)
+        self.stats.setOpenExternalLinks(True)
+        self.statsLayout = QtWidgets.QVBoxLayout()
+        self.statsLayout.addWidget(self.stats)
+        self.statsGroup.setLayout(self.statsLayout)
+
         self.setLayout(QtWidgets.QVBoxLayout())
         self.layout().addWidget(self.summary)
         self.layout().addWidget(self.thumbnail)
         self.layout().addWidget(self.instructionsGroup)
         self.layout().addWidget(self.linksGroup)
+        self.layout().addWidget(self.statsGroup)
         self._refresh()
 
     def _refresh(self):
         self.summary.setText(self.exercise.get("label", "No Label"))
         self.instruction.setText(self.exercise.get("instruction", "No Instructions"))
         self.links.setText(self._format_hyperlinks())
+        self._format_stats()
         self._update_thumbnail()
 
     def _format_hyperlinks(self):
@@ -60,6 +71,11 @@ class ExerciseSpreadSheet(QtWidgets.QWidget):
                                                          QtCore.Qt.TransformationMode.SmoothTransformation)
         self.thumbnail.setPixmap(thumbnail)
         self.thumbnail.setScaledContents(True)
+
+    def _format_stats(self):
+        stats = ""
+        stats += "Level: " + str(self.exercise.get("level", -1.0))
+        self.stats.setText(stats)
 
     def refresh(self, exercise):
         self.exercise = exercise

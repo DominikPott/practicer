@@ -1,0 +1,13 @@
+{
+  "name": "hands",
+  "label": "Hands",
+  "level": 5.0,
+  "tags": ["anatomy", "hands", "intermediate"],
+  "categories": ["anatomy", "drawing", "painting"],
+  "thumbnail": ".\\exercises\\anatomy\\hands\\hands.jpg",
+  "template": ".\\exercises\\anatomy\\hands\\hands.clip",
+  "instruction": "Draw or paint one hundred hands. Use reference for a few and redraw from memory after a certain time.",
+  "hyperlinks": [],
+  "references": ["path/to/references"],
+  "references_tags": ["hands", "drawing", "anatomy", "painting"]
+}

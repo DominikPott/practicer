@@ -1,5 +1,6 @@
 import exercise_interface
 import file_setup
+import reference_images
 
 
 def exercises():
@@ -11,8 +12,8 @@ def create(exercise):
 
 
 def references_images(exercise):
-    import os
     path = r"Z:\referenzen\Fashion"
-    images = os.listdir(path)
-    images = [os.path.join(path, image) for image in images]
+    collection = reference_images.crawl_images(root=path)
+    print(collection)
+    images = collection.get(exercise["categories"][1], [])
     return images

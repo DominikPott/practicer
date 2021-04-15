@@ -7,7 +7,7 @@
   "thumbnail": ".\\exercises\\drawing\\line_weight\\line_weight.jpg",
   "template": ".\\exercises\\drawing\\line_weight\\lineweight.clip",
   "instruction": "An exercise to practice different lineweights for inside/outside lines.Paint overlapping objects and assign differnt lineweights to show the form /position / lighting",
-  "hyperlinks": [],
+  "hyperlinks": ["https://drawabox.com"],
   "references": ["path/to/references"],
   "references_tags": ["line", "lineweight", "drawing"]
 }

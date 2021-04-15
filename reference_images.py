@@ -1,3 +1,4 @@
+import os
 import random
 
 from PIL import Image, ExifTags
@@ -18,11 +19,9 @@ def get_image_tags(image):
     return tags
 
 
-if __name__ == "__main__":
-    import os
-    imageDir = r"Z:\referenzen\Fashion"
+def crawl_images(root):
     data = {}
-    for root, dirs, files in os.walk(imageDir):
+    for root, dirs, files in os.walk(root):
         for f in files:
             tags = get_image_tags(image=os.path.join(root, f))
             for tag in tags:
@@ -31,14 +30,17 @@ if __name__ == "__main__":
         data.pop("")
     except KeyError:
         pass
-    print(data)
     categories = list(data.keys())
     if not categories:
         print("No Tags found in reference images.")
+        return {}
+    return data
+
+
+def select_random_image_from_data(data):
+    categories = list(data.keys())
     random.shuffle(categories)
     categorie = categories.pop()
     images = data[categorie]
     random.shuffle(images)
-    image = images[0]
-    print(categorie)
-    print(image)
+    return images[0]

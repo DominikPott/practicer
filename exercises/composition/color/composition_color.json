@@ -3,11 +3,11 @@
   "label": "Composition Color",
   "level": 2.0,
   "tags": ["value", "composition", "painting", "fundamental"],
-  "categories": ["composition"],
+  "categories": ["composition", "color"],
   "thumbnail": ".\\exercises\\composition\\color\\composition_color.jpg",
   "template": ".\\exercises\\composition\\color\\composition.clip",
   "instruction": "Paint an interesting picture with 3 different colors.\\nExercise time should be around 5-10 Minutes.",
-  "hyperlinks": ["www.google.com"],
+  "hyperlinks": [],
   "references": ["path/to/references"],
   "references_tags": ["value", "composition"]
 }

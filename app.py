@@ -3,7 +3,7 @@ import sys
 from PySide6 import QtWidgets
 
 import api
-from widgets import exercise_spreadsheet, exerciseTree, reference_widget
+from widgets import exercise_spreadsheet, exercise_tree, reference_widget
 
 
 class PractiseApp(QtWidgets.QMainWindow):
@@ -20,7 +20,7 @@ class PractiseApp(QtWidgets.QMainWindow):
         self._exercises_data = exercises
         self.exercise = self._exercises_data[0]
 
-        self.exercises = exerciseTree.ExerciseTree(exercises=self._exercises_data)
+        self.exercises = exercise_tree.ExerciseTree(exercises=self._exercises_data)
         self.exercises.setFixedWidth(200)
         self.exercise_details = exercise_spreadsheet.ExerciseSpreadSheet(exercise=self.exercise)
         self.references = reference_widget.ReferenceWidget(references=api.references_images(exercise=self.exercise))
