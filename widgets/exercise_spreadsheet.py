@@ -28,10 +28,10 @@ class ExerciseSpreadSheet(QtWidgets.QWidget):
         self.instructionsGroup.setLayout(self.instructionsLayout)
 
         self.linksGroup = QtWidgets.QGroupBox("Links:")
+        self.linksGroup.setMaximumHeight(60)
         self.links = QtWidgets.QLabel()
         self.links.setAlignment(QtCore.Qt.AlignCenter)
         self.links.setOpenExternalLinks(True)
-        self.links.setMaximumHeight(80)
         self.linksLayout = QtWidgets.QVBoxLayout()
         self.linksLayout.addWidget(self.links)
         self.linksGroup.setLayout(self.linksLayout)
