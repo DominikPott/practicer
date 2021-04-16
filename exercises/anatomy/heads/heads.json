@@ -1,0 +1,13 @@
+{
+  "name": "Heads",
+  "label": "Heads",
+  "level": 5.5,
+  "tags": ["anatomy", "heads", "intermediate"],
+  "categories": ["anatomy", "drawing", "painting"],
+  "thumbnail": ".\\exercises\\anatomy\\heads\\heads.jpg",
+  "template": ".\\exercises\\anatomy\\heads\\heads.clip",
+  "instruction": "Draw or paint one hundred heads. Use reference for a few and redraw from memory after a certain time.",
+  "hyperlinks": [],
+  "references": ["path/to/references"],
+  "references_tags": ["heads", "drawing", "anatomy", "painting"]
+}
