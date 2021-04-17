@@ -3,3 +3,5 @@
 WORK_DIR = r'Z:\zeichnungen'
 DEFAULT_TEMPLATE = r".\templates\default.clip"
 EXERCISES_DIRECTORY = r".\exercises"
+
+REFERENCES_DIRECTORY = r"Z:\referenzen\Fashion"

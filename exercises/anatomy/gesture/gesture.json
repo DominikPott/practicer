@@ -1,0 +1,13 @@
+{
+  "name": "gesture",
+  "label": "Gesture",
+  "level": 2.5,
+  "tags": ["anatomy", "gesture", "intermediate"],
+  "categories": ["anatomy", "gesture", "drawing", "painting"],
+  "thumbnail": ".\\exercises\\anatomy\\gesture\\gesture.jpg",
+  "template": ".\\exercises\\anatomy\\gesture\\gesture.clip",
+  "instruction": "Draw or paint one hundred heads. Use reference for a few and redraw from memory after a certain time.",
+  "hyperlinks": ["https://www.bodiesinmotion.photo/quick-draw"],
+  "references": ["path/to/references"],
+  "references_tags": ["gesture", "drawing", "anatomy", "painting"]
+}

@@ -1,10 +1,16 @@
 import os
-import random
 
-from PIL import Image, ExifTags
+from PIL import Image, ExifTags, UnidentifiedImageError
 
 
-def get_image_tags(image):
+def image_tags(image):
+    try:
+        return parse_image_for_tags(image)
+    except UnidentifiedImageError:
+        return []
+
+
+def parse_image_for_tags(image):
     img = Image.open(image)
     img_exif = img.getexif()
     data = {}
@@ -19,13 +25,14 @@ def get_image_tags(image):
     return tags
 
 
-def crawl_images(root):
+def crawl_images(roots):
     data = {}
-    for root, dirs, files in os.walk(root):
-        for f in files:
-            tags = get_image_tags(image=os.path.join(root, f))
-            for tag in tags:
-                data.setdefault(tag, []).append(os.path.join(root, f))
+    for directory in roots:
+        for root, dirs, files in os.walk(directory):
+            for f in files:
+                tags = image_tags(image=os.path.join(root, f))
+                for tag in tags:
+                    data.setdefault(tag, []).append(os.path.join(root, f))
     try:
         data.pop("")
     except KeyError:
@@ -35,12 +42,3 @@ def crawl_images(root):
         print("No Tags found in reference images.")
         return {}
     return data
-
-
-def select_random_image_from_data(data):
-    categories = list(data.keys())
-    random.shuffle(categories)
-    categorie = categories.pop()
-    images = data[categorie]
-    random.shuffle(images)
-    return images[0]

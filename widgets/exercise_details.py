@@ -3,10 +3,11 @@ from PySide6 import QtWidgets, QtCore, QtGui
 
 class ExerciseSpreadSheet(QtWidgets.QWidget):
 
-    def __init__(self, exercise, parent=None):
+    def __init__(self, exercise, stats, parent=None):
         super(ExerciseSpreadSheet, self).__init__(parent)
 
         self.exercise = exercise
+        self._stats = stats
         self.thumbnail = QtWidgets.QLabel()
         self.thumbnail.setMinimumSize(640, 360)
 
@@ -36,11 +37,8 @@ class ExerciseSpreadSheet(QtWidgets.QWidget):
         self.linksLayout.addWidget(self.links)
         self.linksGroup.setLayout(self.linksLayout)
 
-        self.statsGroup = QtWidgets.QGroupBox("Stats:")
-        self.stats = QtWidgets.QLabel()
-
-        self.stats.setAlignment(QtCore.Qt.AlignVCenter)
-        self.stats.setOpenExternalLinks(True)
+        self.statsGroup = QtWidgets.QGroupBox("Archivments:")
+        self.stats = StatsWidget(stats=self._stats)
         self.statsLayout = QtWidgets.QVBoxLayout()
         self.statsLayout.addWidget(self.stats)
         self.statsGroup.setLayout(self.statsLayout)
@@ -57,7 +55,6 @@ class ExerciseSpreadSheet(QtWidgets.QWidget):
         self.summary.setText(self.exercise.get("label", "No Label"))
         self.instruction.setText(self.exercise.get("instruction", "No Instructions"))
         self.links.setText(self._format_hyperlinks())
-        self._format_stats()
         self._update_thumbnail()
 
     def _format_hyperlinks(self):
@@ -72,12 +69,46 @@ class ExerciseSpreadSheet(QtWidgets.QWidget):
         self.thumbnail.setPixmap(thumbnail)
         self.thumbnail.setScaledContents(True)
 
-    def _format_stats(self):
-        stats = ""
-        stats += "Level: " + str(self.exercise.get("level", -1.0))
-        self.stats.setText(stats)
-
-    def refresh(self, exercise):
+    def refresh(self, exercise, stats):
         self.exercise = exercise
+        self._stats = stats
         self._refresh()
 
+
+class StatsWidget(QtWidgets.QWidget):
+    def __init__(self, stats, parent=None):
+        super(StatsWidget, self).__init__(parent=parent)
+        self._stats = stats
+        self.level_progress = QtWidgets.QProgressBar()
+        self.setLayout(QtWidgets.QVBoxLayout())
+        self.layout().addWidget(self._stars())
+        self.layout().addWidget(self.level_progress)
+        self.level_progress.setRange(0, 100.0)
+        self.level_progress.setValue(self._stats.get("progress", 0.0))
+
+    def refresh(self, stats):
+        self._stats
+
+    def _stars(self):
+        widget = QtWidgets.QWidget()
+        layout = QtWidgets.QHBoxLayout()
+        widget.setLayout(layout)
+        enabled = QtGui.QPixmap.fromImage(QtGui.QImage(r".\widgets\resources\enabled.png"))
+        disabled = QtGui.QPixmap.fromImage(QtGui.QImage(r".\widgets\resources\disabled.png"))
+        i = 1
+        while i <= self._stats.get("level", 0):
+            star_enabled = QtWidgets.QLabel()
+            star_enabled.setPixmap(enabled)
+            star_enabled.setFixedSize(32, 32)
+            star_enabled.setScaledContents(True)
+            widget.layout().addWidget(star_enabled)
+            i += 1
+        i = 1
+        while i <= 5-self._stats.get("level", 0):
+            star = QtWidgets.QLabel()
+            star.setPixmap(disabled)
+            star.setFixedSize(32, 32)
+            star.setScaledContents(True)
+            widget.layout().addWidget(star)
+            i += 1
+        return widget

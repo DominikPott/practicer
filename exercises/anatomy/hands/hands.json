@@ -7,7 +7,7 @@
   "thumbnail": ".\\exercises\\anatomy\\hands\\hands.jpg",
   "template": ".\\exercises\\anatomy\\hands\\hands.clip",
   "instruction": "Draw or paint one hundred hands. Use reference for a few and redraw from memory after a certain time.",
-  "hyperlinks": [],
-  "references": ["path/to/references"],
+  "hyperlinks": ["https://www.gvaat.com/blog/how-to-draw-the-hands-a-simple-step-by-step-guide/"],
+  "references": ["Z:\\referenzen\\Anatomy"],
   "references_tags": ["hands", "drawing", "anatomy", "painting"]
 }
