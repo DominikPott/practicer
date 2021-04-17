@@ -8,11 +8,13 @@ class ReferenceWidget(QtWidgets.QWidget):
         self.thumbnails = []
         self.setLayout(QtWidgets.QVBoxLayout())
         self.setMaximumWidth(320)
-        self.setMaximumHeight(180*4)
+        self.setMaximumHeight(180 * 4)
         self._randomize_images()
         self._populate_thumbnails()
 
-    def new_images(self):
+    def new_images(self, images):
+        self._clear()
+        self.references = images
         self._randomize_images()
         self._populate_thumbnails()
 
@@ -38,4 +40,3 @@ class ReferenceWidget(QtWidgets.QWidget):
             self.layout().removeWidget(image_container)
             image_container.clear()
         self.thumbnails = []
-

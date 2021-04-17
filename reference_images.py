@@ -20,7 +20,6 @@ def crawl_images(roots):
     except KeyError:
         pass
     if not list(data.keys()):
-        print("No Tags found in reference images.")
         return {}
     log.debug(data)
     return data
