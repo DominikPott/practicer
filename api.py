@@ -1,26 +1,29 @@
 import logging
 
+import config_loader
 import exercise_interface
 import file_setup
 import reference_images
 
-from config import REFERENCES_DIRECTORY
-
 log = logging.getLogger("practicer")
 log.setLevel(logging.DEBUG)
 
+CONFIG = config_loader.read_config()
+
 
 def exercises():
-    return exercise_interface.exercises()
+    exercise_path = CONFIG["EXERCISES"]["PATH"]
+    return exercise_interface.exercises(root=exercise_path)
 
 
 def create(exercise):
-    file_setup.create(exercise)
+    workpath = CONFIG["WORK"]["PATH"]
+    template = CONFIG["TEMPLATE"]["DEFAULT"]
+    file_setup.create(exercise=exercise, root=workpath, template=template)
 
 
 def references_images(exercise):
-    reference_dirs = exercise.get("references", [REFERENCES_DIRECTORY])
-    return []
+    reference_dirs = exercise.get("references", [CONFIG["REFERENCES"]["PATH"]])
     collection = reference_images.crawl_images(roots=reference_dirs)
     images = []
     for tag in exercise.get("references_tags", []):

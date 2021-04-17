@@ -1,4 +1,5 @@
 from PySide6 import QtWidgets, QtCore, QtGui
+import apps.pyside.resources
 
 
 class ExerciseSpreadSheet(QtWidgets.QWidget):
@@ -93,8 +94,8 @@ class StatsWidget(QtWidgets.QWidget):
         widget = QtWidgets.QWidget()
         layout = QtWidgets.QHBoxLayout()
         widget.setLayout(layout)
-        enabled = QtGui.QPixmap.fromImage(QtGui.QImage(r".\widgets\resources\enabled.png"))
-        disabled = QtGui.QPixmap.fromImage(QtGui.QImage(r".\widgets\resources\disabled.png"))
+        enabled = QtGui.QPixmap.fromImage(QtGui.QImage(":/icons/enabled.png"))
+        disabled = QtGui.QPixmap.fromImage(QtGui.QImage(":/icons/disabled.png"))
         i = 1
         while i <= self._stats.get("level", 0):
             star_enabled = QtWidgets.QLabel()

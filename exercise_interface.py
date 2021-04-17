@@ -1,25 +1,23 @@
 import os
 import json
 
-from config import EXERCISES_DIRECTORY
 
-
-def exercises():
-    files = _find_exercise_files()
+def exercises(root):
+    files = _find_exercise_files(root=root)
     return _parse(files)
 
 
-def _find_exercise_files():
+def _find_exercise_files(root):
     exercise_files = []
-    for root, dirs, files in os.walk(EXERCISES_DIRECTORY):
-        exercises = [f for f in files if f.endswith(".json")]
-        exercise_files.extend([os.path.join(root, exercise) for exercise in exercises])
+    for root_dir, dirs, files in os.walk(root):
+        files = [f for f in files if f.endswith(".json")]
+        exercise_files.extend([os.path.join(root_dir, exercise) for exercise in files])
     return exercise_files
 
 
 def _parse(exercise_files):
-    exercises = []
+    exercises_ = []
     for f in exercise_files:
         with open(f, "r") as exercise_file:
-            exercises.append(json.load(exercise_file))
-    return exercises
+            exercises_.append(json.load(exercise_file))
+    return exercises_

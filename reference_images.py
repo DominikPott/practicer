@@ -1,6 +1,29 @@
+import logging
 import os
 
 from PIL import Image, ExifTags, UnidentifiedImageError
+
+log = logging.getLogger(name=__name__)
+log.setLevel(logging.DEBUG)
+
+
+def crawl_images(roots):
+    data = {}
+    for directory in roots:
+        for root, dirs, files in os.walk(directory):
+            for f in files:
+                tags = image_tags(image=os.path.join(root, f))
+                for tag in tags:
+                    data.setdefault(tag, []).append(os.path.join(root, f))
+    try:
+        data.pop("")
+    except KeyError:
+        pass
+    if not list(data.keys()):
+        print("No Tags found in reference images.")
+        return {}
+    log.debug(data)
+    return data
 
 
 def image_tags(image):
@@ -23,22 +46,3 @@ def parse_image_for_tags(image):
     tags = tags.replace("\x00", "")
     tags = tags.split(";")
     return tags
-
-
-def crawl_images(roots):
-    data = {}
-    for directory in roots:
-        for root, dirs, files in os.walk(directory):
-            for f in files:
-                tags = image_tags(image=os.path.join(root, f))
-                for tag in tags:
-                    data.setdefault(tag, []).append(os.path.join(root, f))
-    try:
-        data.pop("")
-    except KeyError:
-        pass
-    categories = list(data.keys())
-    if not categories:
-        print("No Tags found in reference images.")
-        return {}
-    return data

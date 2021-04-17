@@ -1,9 +1,10 @@
 import sys
+from widgets import exercise_details, exercise_tree, reference_widget
 
-from PySide6 import QtWidgets
+from PySide6 import QtWidgets, QtGui, QtCore
+import apps.pyside.resources
 
 import api
-from widgets import exercise_details, exercise_tree, reference_widget
 
 
 class PractiseApp(QtWidgets.QMainWindow):
@@ -11,6 +12,7 @@ class PractiseApp(QtWidgets.QMainWindow):
     def __init__(self, exercises, parent=None):
         super(PractiseApp, self).__init__(parent)
         self.setWindowTitle("Practicer")
+        self.setWindowIcon(QtGui.QIcon(":/icons/practicer.png"))
         self.setStyleSheet(self.load_stylesheet())
 
         self.setCentralWidget(QtWidgets.QWidget())
@@ -35,10 +37,9 @@ class PractiseApp(QtWidgets.QMainWindow):
 
     @staticmethod
     def load_stylesheet():
-        path = r".\stylesheets\darkorange.qss"
-        with open(path, "r") as s:
-            stylesheet = s.read()
-        return stylesheet
+        stylesheet = QtCore.QFile(":/stylesheets/darkorange.qss")
+        stylesheet.open(QtCore.QFile.ReadOnly | QtCore.QFile.Text)
+        return QtCore.QTextStream(stylesheet).readAll()
 
     def exercise_changed(self, new_exercise):
         stats = api.exercise_stats(new_exercise)
