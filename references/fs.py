@@ -3,8 +3,22 @@ import os
 
 from PIL import Image, ExifTags, UnidentifiedImageError
 
+import config_loader
+
 log = logging.getLogger(name=__name__)
 log.setLevel(logging.DEBUG)
+
+CONFIG = config_loader.read_config()
+
+
+def images(exercise):
+    roots = exercise.get("references", [CONFIG["REFERENCES"]["PATH"]])  # TODO: Think of a better way. Config should
+    # not be imported here.
+    collection = crawl_images(roots=roots)
+    images = []
+    for tag in exercise.get("references_tags", []):
+        images.extend(collection.get(tag, []))
+    return images
 
 
 def crawl_images(roots):

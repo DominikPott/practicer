@@ -44,11 +44,8 @@ class PractiseApp(QtWidgets.QMainWindow):
         self.references.new_images(images)
 
     def start_exercise(self, new_exercise):
-        api.increment_exercise_stats(exercise=new_exercise)  # TODO: Think if this method shoud be combined with api.create()
-        stats = api.stats(new_exercise)
-        self.exercise_details.refresh(new_exercise, stats)
+        api.start(exercise=new_exercise)
         self.statusBar().showMessage("Starting {label} Exercise".format(**new_exercise), 5000)
-        api.create(exercise=new_exercise)
 
 
 def load_stylesheet():
