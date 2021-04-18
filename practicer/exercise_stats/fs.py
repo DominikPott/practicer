@@ -1,9 +1,9 @@
 import json
 import pathlib
 
-import config_loader
+import practicer.config
 
-CONFIG = config_loader.read_config()
+CONFIG = practicer.config.load()
 
 DEFAULT_STATS = {'level': 0, 'progress': 0.0}
 

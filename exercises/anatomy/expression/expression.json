@@ -2,12 +2,31 @@
   "name": "expression",
   "label": "Facial Expression",
   "level": 7.5,
-  "tags": ["anatomy", "head", "expression", "intermediate"],
-  "categories": ["anatomy", "drawing", "painting"],
-  "thumbnail": ".\\exercises\\anatomy\\expression\\expression.jpg",
-  "template": ".\\exercises\\anatomy\\expression\\expression.clip",
+  "tags": [
+    "anatomy",
+    "head",
+    "expression",
+    "intermediate"
+  ],
+  "categories": [
+    "anatomy",
+    "drawing",
+    "painting"
+  ],
+  "thumbnail": "expression.jpg",
+  "template": "expression.clip",
   "instruction": "Draw or paint one hundred heads. Use reference for a few and redraw from memory after a certain time.",
-  "hyperlinks": ["https://www.clipstudio.net/how-to-draw/archives/157239", "https://www.bodiesinmotion.photo/quick-draw"],
-  "references": ["test/path"],
-  "references_tags": ["expression", "drawing", "anatomy", "painting"]
+  "hyperlinks": [
+    "https://www.clipstudio.net/how-to-draw/archives/157239",
+    "https://www.bodiesinmotion.photo/quick-draw"
+  ],
+  "references": [
+    "test/path"
+  ],
+  "references_tags": [
+    "expression",
+    "drawing",
+    "anatomy",
+    "painting"
+  ]
 }

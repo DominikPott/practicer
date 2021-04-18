@@ -1,13 +1,13 @@
 from PySide6 import QtWidgets, QtCore, QtGui
 
 
-class ExerciseTree(QtWidgets.QWidget):
+class ExerciseList(QtWidgets.QWidget):
 
     changed = QtCore.Signal(object)
     double_clicked = QtCore.Signal(object)
 
     def __init__(self, exercises, parent=None):
-        super(ExerciseTree, self).__init__(parent)
+        super(ExerciseList, self).__init__(parent)
         self._exercises = exercises
 
         self.filter = QtWidgets.QLineEdit()

@@ -2,12 +2,27 @@
   "name": "line_control",
   "label": "Line Control",
   "level": 2.0,
-  "tags": ["line", "lineweight", "drawing", "fundamental"],
-  "categories": ["drawing"],
-  "thumbnail": ".\\exercises\\drawing\\line_control\\line_control.jpg",
-  "template": ".\\exercises\\drawing\\line_control\\line_control.clip",
+  "tags": [
+    "line",
+    "lineweight",
+    "drawing",
+    "fundamental"
+  ],
+  "categories": [
+    "drawing"
+  ],
+  "thumbnail": "line_control.jpg",
+  "template": "line_control.clip",
   "instruction": "An exercise to practice different drawing lines and circles to improce muscle memory. Draw lines in the marked areas. Draw perfect circles",
-  "hyperlinks": ["https://drawabox.com"],
-  "references": ["path/to/references"],
-  "references_tags": ["line", "lineweight", "drawing"]
+  "hyperlinks": [
+    "https://drawabox.com"
+  ],
+  "references": [
+    "path/to/references"
+  ],
+  "references_tags": [
+    "line",
+    "lineweight",
+    "drawing"
+  ]
 }

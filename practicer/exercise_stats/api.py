@@ -1,5 +1,5 @@
 """"Filesystem / database interface to query exercise stats."""
-import exercise_stats.fs as fs
+import practicer.exercise_stats.fs as fs
 
 IO = fs
 

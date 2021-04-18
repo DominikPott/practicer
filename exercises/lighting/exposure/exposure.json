@@ -2,12 +2,29 @@
   "name": "exposure",
   "label": "Exposure",
   "level": 4.0,
-  "tags": ["value", "painting", "exposure", "color", "fundamental"],
-  "categories": ["light"],
-  "thumbnail": ".\\exercises\\lighting\\exposure\\exposure.jpg",
-  "template": ".\\exercises\\lighting\\exposure\\exposure.clip",
+  "tags": [
+    "value",
+    "painting",
+    "exposure",
+    "color",
+    "fundamental"
+  ],
+  "categories": [
+    "light"
+  ],
+  "thumbnail": "exposure.jpg",
+  "template": "exposure.clip",
   "instruction": "Choose under or overexposed and adjust the values and colors on the objects accordingly.",
-  "hyperlinks": ["https://www.drawing.com"],
-  "references": ["path/to/references"],
-  "references_tags": ["light", "painting", "color", "exposure"]
+  "hyperlinks": [
+    "https://www.drawing.com"
+  ],
+  "references": [
+    "path/to/references"
+  ],
+  "references_tags": [
+    "light",
+    "painting",
+    "color",
+    "exposure"
+  ]
 }

@@ -1,15 +1,15 @@
 import logging
 
-import config_loader
-import exercise_interface
-import file_setup
-import references.api
-import exercise_stats.api
+import practicer.config as config
+import practicer.exercise_interface as exercise_interface
+import practicer.file_setup as file_setup
+import practicer.references.api as references
+import practicer.exercise_stats.api as exercise_stats
 
 log = logging.getLogger("practicer")
 log.setLevel(logging.DEBUG)
 
-CONFIG = config_loader.read_config()
+CONFIG = config.load()
 
 
 def exercises():
@@ -34,12 +34,17 @@ def _increment_exercise_stats(exercise):
     if stats_["progress"] >= 10:
         stats_["level"] += 1
         stats_["progress"] = 0
-    exercise_stats.api.update(exercise, stats_)
+    exercise_stats.update(exercise, stats_)
 
 
 def references_images(exercise):
-    return references.api.images(exercise)
+    return []
+    return references.images(exercise)
 
 
 def stats(exercise):
-    return exercise_stats.api.stats(exercise)
+    return exercise_stats.stats(exercise)
+
+
+if __name__ == '__main__':
+    print(exercises())

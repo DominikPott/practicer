@@ -2,12 +2,26 @@
   "name": "ambient_occlusion",
   "label": "Ambient Occlusion",
   "level": 3.0,
-  "tags": ["value", "painting", "ambient occlusion", "fundamental"],
-  "categories": ["light"],
-  "thumbnail": ".\\exercises\\lighting\\ambient_occlusion\\ambient_occlusion.jpg",
-  "template": ".\\exercises\\lighting\\ambient_occlusion\\ambient_occlusion.clip",
+  "tags": [
+    "value",
+    "painting",
+    "ambient occlusion",
+    "fundamental"
+  ],
+  "categories": [
+    "light"
+  ],
+  "thumbnail": "ambient_occlusion.jpg",
+  "template": "ambient_occlusion.clip",
   "instruction": "Paint the Ambient Occlusion for different Objects. Paint a simple object and add lights from different directions. These should vary in color and intensity.",
-  "references": ["path/to/references"],
-  "references_tags": ["light", "painting", "color", "ambient occlusion"],
+  "references": [
+    "path/to/references"
+  ],
+  "references_tags": [
+    "light",
+    "painting",
+    "color",
+    "ambient occlusion"
+  ],
   "hyperlinks": []
 }

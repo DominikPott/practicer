@@ -2,12 +2,26 @@
   "name": "time_of_day",
   "label": "Time of Day",
   "level": 3.5,
-  "tags": ["value", "painting", "edge", "color", "fundamental"],
-  "categories": ["light"],
-  "thumbnail": ".\\exercises\\lighting\\time_of_day\\time_of_day.jpg",
-  "template": ".\\exercises\\lighting\\time_of_day\\time_of_day.clip",
+  "tags": [
+    "value",
+    "painting",
+    "edge",
+    "color",
+    "fundamental"
+  ],
+  "categories": [
+    "light"
+  ],
+  "thumbnail": "time_of_day.jpg",
+  "template": "time_of_day.clip",
   "instruction": "Study different Lighting Scenarios which occour during the day. Pick a daytime, seach for reference and try to transfer the lighting onto a simple scene.",
   "hyperlinks": [],
-  "references": ["path/to/references"],
-  "references_tags": ["light", "painting", "color"]
+  "references": [
+    "path/to/references"
+  ],
+  "references_tags": [
+    "light",
+    "painting",
+    "color"
+  ]
 }
