@@ -1,6 +1,6 @@
 {
-  "name": "materials",
-  "label": "Materials",
+  "name": "material",
+  "label": "Material",
   "level": 4.0,
   "tags": [
     "value",
@@ -13,8 +13,8 @@
   "categories": [
     "painting"
   ],
-  "thumbnail": "materials.jpg",
-  "template": "materials.clip",
+  "thumbnail": "material.jpg",
+  "template": "material.clip",
   "instruction": "Construct the shadow of simple grids and sticks. These can be cast on other objects. Try different lights to see the effect of hard or soft shadows.",
   "references": [
     "path/to/references"
