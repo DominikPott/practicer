@@ -20,8 +20,11 @@
     "https://www.clipstudio.net/how-to-draw/archives/157239",
     "https://www.bodiesinmotion.photo/quick-draw"
   ],
-  "references": [
-    "test/path"
+  "reference_paths": [
+    "Z:\\referenzen\\Expression"
+  ],
+  "reference_urls": [
+    "https://cdna.artstation.com/p/assets/images/images/024/468/164/large/magda-proski-magdalena-proszowska-cherry.jpg"
   ],
   "references_tags": [
     "expression",

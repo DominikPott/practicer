@@ -6,12 +6,9 @@ import practicer.config as config
 log = logging.getLogger(name=__name__)
 log.setLevel(logging.DEBUG)
 
-CONFIG = config.load()
-
 
 def images(exercise):
-    roots = exercise.get("references", [CONFIG["REFERENCES"]["PATH"]])  # TODO: Think of a better way. Config should
-    # not be imported here.
+    roots = exercise.get("reference_paths", [])
     return crawl_images(roots=roots)
 
 

@@ -1,12 +1,12 @@
 import logging
 import os
 
-import config_loader
+import practicer.config
 
 log = logging.getLogger(name=__name__)
 log.setLevel(logging.DEBUG)
 
-CONFIG = config_loader.read_config()
+CONFIG = practicer.config.load()
 
 
 def images(exercise):

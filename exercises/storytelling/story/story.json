@@ -1,0 +1,19 @@
+{
+  "name": "story",
+  "label": "Story",
+  "level": 4.0,
+  "tags": [
+    "storytelling",
+    "intermediate"
+  ],
+  "categories": [
+    "storytelling",
+    "story"
+  ],
+  "thumbnail": "",
+  "template": "",
+  "instruction": "Include story elements inside your painting / illustration",
+  "reference_paths": [],
+  "reference_urls": [],
+  "hyperlinks": []
+}
