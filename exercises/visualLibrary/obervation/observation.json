@@ -1,0 +1,24 @@
+{
+  "name": "obeservation",
+  "label": "Observation",
+  "level": 1.0,
+  "tags": [
+    "visual library",
+    "fundamental"
+  ],
+  "categories": [
+    "visual library"
+  ],
+  "thumbnail": "",
+  "template": "",
+  "instruction": "- Observe with a purpose \\n - Choose Reference on the topic ou want to study \\n -Aim to learn more what zou want to observe\\n -Assignment: Try Mindfullness and keep track of time.",
+  "references": [
+    "path/to/references"
+  ],
+  "references_tags": [
+    "observation"
+  ],
+  "hyperlinks": [
+    "https://www.drawing.com"
+  ]
+}

@@ -1,0 +1,11 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="icons">
+        <file alias="practicer.png">.\icons\practicer.png</file>
+        <file alias="enabled.png">.\icons\enabled.png</file>
+        <file alias="disabled.png">.\icons\disabled.png</file>
+    </qresource>
+    <qresource prefix="stylesheets">
+        <file alias="darkorange.qss">.\stylesheets\darkorange.qss</file>
+    </qresource>
+</RCC>

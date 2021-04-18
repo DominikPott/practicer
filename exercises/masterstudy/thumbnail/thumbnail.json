@@ -1,0 +1,28 @@
+{
+  "name": "thumbnail",
+  "label": "Thumbnail",
+  "level": 2.5,
+  "tags": [
+    "value",
+    "composition",
+    "painting",
+    "edge",
+    "color",
+    "intermediate"
+  ],
+  "categories": [
+    "masterstudy"
+  ],
+  "thumbnail": "thumbnail.jpg",
+  "template": "thumbnail.clip",
+  "instruction": "Study Masterpaintings by generating thumbnails. Paint a miniture masterstudy. Focus on Value, Composition, Edges and Color.",
+  "hyperlinks": [],
+  "references": [
+    "path/to/references"
+  ],
+  "references_tags": [
+    "value",
+    "composition",
+    "painting"
+  ]
+}

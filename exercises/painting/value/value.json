@@ -1,0 +1,30 @@
+{
+  "name": "value",
+  "label": "Value",
+  "level": 2.0,
+  "tags": [
+    "value",
+    "painting",
+    "edge",
+    "color",
+    "fundamental",
+    "shading"
+  ],
+  "categories": [
+    "painting"
+  ],
+  "thumbnail": "value.jpg",
+  "template": "value.clip",
+  "instruction": "Paint imaginative or refernced simple objects and studie the values.",
+  "hyperlinks": [
+    "https://www.deviantart.com/nsio/art/Nsio-Explains-Shading-Basics-647268365"
+  ],
+  "references": [
+    "path/to/references"
+  ],
+  "references_tags": [
+    "value",
+    "painting",
+    "color"
+  ]
+}

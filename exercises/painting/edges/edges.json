@@ -1,0 +1,27 @@
+{
+  "name": "edges",
+  "label": "Edges",
+  "level": 2.0,
+  "tags": [
+    "value",
+    "painting",
+    "edge",
+    "color",
+    "fundamental"
+  ],
+  "categories": [
+    "painting"
+  ],
+  "thumbnail": "edges.jpg",
+  "template": "edges.clip",
+  "instruction": "Work on hard and soft edges and or lost and found edges.Try blending forms with hard and soft edges. . ..",
+  "references": [
+    "path/to/references"
+  ],
+  "references_tags": [
+    "painting"
+  ],
+  "hyperlinks": [
+    "www.google.com"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "shadow",
+  "label": "Shadow Construction",
+  "level": 2.0,
+  "tags": [
+    "value",
+    "painting",
+    "edge",
+    "color",
+    "fundamental",
+    "shadow"
+  ],
+  "categories": [
+    "light"
+  ],
+  "thumbnail": "shadow.jpg",
+  "template": "shadow.clip",
+  "instruction": "Construct shadows for simple and complex objects. Construct the shadow of simple grids and sticks. These can be cast on other objects. Try different lights to see the effect of hard or soft shadows.",
+  "hyperlinks": [],
+  "references": [
+    "path/to/references"
+  ],
+  "references_tags": [
+    "light",
+    "painting",
+    "color"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "feet",
+  "label": "Feet",
+  "level": 5.5,
+  "tags": [
+    "anatomy",
+    "feet",
+    "intermediate"
+  ],
+  "categories": [
+    "anatomy",
+    "drawing",
+    "painting"
+  ],
+  "thumbnail": "feet.jpg",
+  "template": "feet.clip",
+  "instruction": "Draw or paint one hundred heads. Use reference for a few and redraw from memory after a certain time.",
+  "hyperlinks": [],
+  "references": [
+    "path/to/references"
+  ],
+  "references_tags": [
+    "feet",
+    "drawing",
+    "anatomy",
+    "painting"
+  ]
+}
