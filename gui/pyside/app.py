@@ -1,8 +1,8 @@
 import sys
-from apps.pyside.widgets import exercise_details, exercise_list, reference_widget
+from gui.pyside.widgets import exercise_details, exercise_list, reference_widget
 
 from PySide6 import QtWidgets, QtGui, QtCore
-import apps.pyside.resources  # compiled pyside resources.qrc file which includes the pyside aliases
+import gui.pyside.resources  # compiled pyside resources.qrc file which includes the pyside aliases
 
 import practicer.api
 

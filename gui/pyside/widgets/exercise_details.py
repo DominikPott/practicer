@@ -1,5 +1,5 @@
 from PySide6 import QtWidgets, QtCore, QtGui
-import apps.pyside.resources  # pyside compiles resources. Holds the icons for qresources
+import gui.pyside.resources  # pyside compiles resources. Holds the icons for qresources
 
 
 class ExerciseSpreadSheet(QtWidgets.QWidget):
