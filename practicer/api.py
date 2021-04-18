@@ -38,7 +38,6 @@ def _increment_exercise_stats(exercise):
 
 
 def references_images(exercise):
-    return []
     return references.images(exercise)
 
 

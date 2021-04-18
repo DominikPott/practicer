@@ -16,8 +16,11 @@ class PractiseApp(QtWidgets.QMainWindow):
         self.setStyleSheet(load_stylesheet())
 
         self.setMenuBar(QtWidgets.QMenuBar())
-        self.file_menu = QtWidgets.QMenu("File")
+        self.file_menu = QtWidgets.QMenu("Settings")
         self.about_menu = QtWidgets.QMenu("About")
+        self.help = QtGui.QAction('Help')
+        self.about_menu.addAction(self.help)
+
         self.menuBar().addMenu(self.file_menu)
         self.menuBar().addMenu(self.about_menu)
 

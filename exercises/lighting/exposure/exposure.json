@@ -16,7 +16,7 @@
   "template": "exposure.clip",
   "instruction": "Choose under or overexposed and adjust the values and colors on the objects accordingly.",
   "hyperlinks": [
-    "https://www.drawing.com"
+    "https://en.wikipedia.org/wiki/Exposure_(photography)"
   ],
   "references": [
     "path/to/references"
