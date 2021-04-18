@@ -18,8 +18,8 @@ def exercises():
 
 
 def start(exercise):
-    _create(exercise)
     _increment_exercise_stats(exercise)
+    _create(exercise)
 
 
 def _create(exercise):
@@ -31,7 +31,7 @@ def _create(exercise):
 def _increment_exercise_stats(exercise):
     stats_ = stats(exercise)
     stats_["progress"] += 1
-    if stats_["progress"] >= 10:
+    if stats_["progress"] >= 10 * stats_["level"]:
         stats_["level"] += 1
         stats_["progress"] = 0
     exercise_stats.update(exercise, stats_)
@@ -44,7 +44,3 @@ def references_images(exercise):
 
 def stats(exercise):
     return exercise_stats.stats(exercise)
-
-
-if __name__ == '__main__':
-    print(exercises())

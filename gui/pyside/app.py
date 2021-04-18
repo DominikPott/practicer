@@ -33,7 +33,8 @@ class PractiseApp(QtWidgets.QMainWindow):
         self.exercises.setFixedWidth(200)
         self.exercise_details = exercise_details.ExerciseSpreadSheet(exercise=self.exercise,
                                                                      stats=practicer.api.stats(self.exercise))
-        self.references = reference_widget.ReferenceWidget(references=practicer.api.references_images(exercise=self.exercise))
+        self.references = reference_widget.ReferenceWidget(
+            references=practicer.api.references_images(exercise=self.exercise))
 
         self.mainLayout.addWidget(self.exercises)
         self.mainLayout.addWidget(self.exercise_details)

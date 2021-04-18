@@ -22,7 +22,7 @@ def _read_config():
 def _write_default_config(path):
     config = configparser.ConfigParser()
 
-    config["TEMPLATE"] = {"DEFAULT": PACKAGE_DIR / "templates/default.pdg"}
+    config["TEMPLATE"] = {"DEFAULT": PACKAGE_DIR / "templates/default.psd"}
     config["EXERCISES"] = {"PATH": PACKAGE_DIR / "exercises"}
     config["WORK"] = {"PATH": "Z:/zeichnungen"}
     config["REFERENCES"] = {"PATH": "Z:/referenzen/Fashion"}
@@ -34,4 +34,3 @@ def _write_default_config(path):
 
 if __name__ == '__main__':
     _write_default_config()
-    print(load().sections())
