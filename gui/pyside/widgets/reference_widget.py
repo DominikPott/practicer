@@ -12,8 +12,7 @@ class ReferenceWidget(QtWidgets.QWidget):
         self.images = images
         self.containers = []
         self.setLayout(QtWidgets.QVBoxLayout())
-        self.setMaximumWidth(320)
-        self.setMaximumHeight(180 * 4)
+        self.setFixedSize(320, 540)
         self._randomize_images()
         self._populate_containers()
 

@@ -10,7 +10,7 @@ class ExerciseSpreadSheet(QtWidgets.QWidget):
         self.exercise = exercise
         self._stats = stats
         self.thumbnail = QtWidgets.QLabel()
-        self.thumbnail.setFixedSize(640, 360)
+        self.thumbnail.setMinimumSize(640, 360)
 
         self.exercise_name = QtWidgets.QLabel()
         self.exercise_name.setAlignment(QtCore.Qt.AlignCenter)
