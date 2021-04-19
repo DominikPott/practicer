@@ -6,7 +6,7 @@ import pathlib
 import practicer.config
 
 CONFIG = practicer.config.load()
-DEFAULT_STATS = {'level': 0, 'progress': 0.0}
+DEFAULT_STATS = {'level': 0, 'progress': 0.0, 'level_max_progress': 1}
 
 log = logging.getLogger('practicer')
 log.setLevel(logging.DEBUG)

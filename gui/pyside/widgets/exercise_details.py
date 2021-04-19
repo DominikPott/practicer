@@ -90,7 +90,6 @@ class StatsWidget(QtWidgets.QWidget):
         super(StatsWidget, self).__init__(parent=parent)
         self._stats = stats
         self.level_progress = QtWidgets.QProgressBar()
-        self.level_progress.setRange(0, 100.0)
         self.level = LevelWidget()
 
         self.setLayout(QtWidgets.QVBoxLayout())
@@ -102,6 +101,7 @@ class StatsWidget(QtWidgets.QWidget):
     def refresh(self, stats):
         self._stats = stats
         self.level.refresh(self._stats.get("level", 0))
+        self.level_progress.setRange(0, self._stats.get("level_max_progress", 100))
         self.level_progress.setValue(self._stats.get("progress", 0.0))
 
 
