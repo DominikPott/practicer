@@ -29,7 +29,7 @@ class ExerciseSpreadSheet(QtWidgets.QWidget):
         self.instructionsLayout.addWidget(self.instruction)
         self.instructionsGroup.setLayout(self.instructionsLayout)
 
-        self.linksGroup = QtWidgets.QGroupBox("Links:")
+        self.linksGroup = QtWidgets.QGroupBox("Tutorials:")
         self.links = QtWidgets.QLabel()
         self.links.setAlignment(QtCore.Qt.AlignLeading)
         self.links.setOpenExternalLinks(True)

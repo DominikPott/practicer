@@ -1,5 +1,5 @@
 import sys
-from gui.pyside.widgets import exercise_details, exercise_list, reference_widget
+from gui.pyside.widgets import exercise_details, exercise_list
 
 from PySide6 import QtWidgets, QtGui, QtCore
 import gui.pyside.resources  # compiled pyside resources.qrc file which includes the pyside aliases
@@ -36,12 +36,9 @@ class PractiseApp(QtWidgets.QMainWindow):
         self.exercises.setFixedWidth(200)
         self.exercise_details = exercise_details.ExerciseSpreadSheet(exercise=self.exercise,
                                                                      stats=practicer.api.stats(self.exercise))
-        self.references = reference_widget.ReferenceWidget(
-            images=practicer.api.references_images(exercise=self.exercise))
 
         self.mainLayout.addWidget(self.exercises)
         self.mainLayout.addWidget(self.exercise_details)
-        self.mainLayout.addWidget(self.references)
 
         self.exercises.changed.connect(self.exercise_changed)
         self.exercises.double_clicked.connect(self.start_exercise)
@@ -50,8 +47,6 @@ class PractiseApp(QtWidgets.QMainWindow):
     def exercise_changed(self, new_exercise):
         stats = practicer.api.stats(new_exercise)
         self.exercise_details.refresh(new_exercise, stats)
-        images = practicer.api.references_images(new_exercise)
-        self.references.new_images(images)
 
     def start_exercise(self, new_exercise):
         practicer.api.start(exercise=new_exercise)
