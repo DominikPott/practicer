@@ -15,15 +15,6 @@ class PractiseApp(QtWidgets.QMainWindow):
         self.setWindowIcon(QtGui.QIcon(":/icons/practicer.png"))
         self.setStyleSheet(load_stylesheet())
 
-        self.setMenuBar(QtWidgets.QMenuBar())
-        self.file_menu = QtWidgets.QMenu("Settings")
-        self.about_menu = QtWidgets.QMenu("About")
-        self.help = QtGui.QAction('Help')
-        self.about_menu.addAction(self.help)
-
-        self.menuBar().addMenu(self.file_menu)
-        self.menuBar().addMenu(self.about_menu)
-
         self.setCentralWidget(QtWidgets.QWidget())
         self.mainLayout = QtWidgets.QHBoxLayout()
         self.centralWidget().setLayout(self.mainLayout)
