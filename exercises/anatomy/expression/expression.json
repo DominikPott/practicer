@@ -15,7 +15,7 @@
   ],
   "thumbnail": "expression.jpg",
   "template": "expression.clip",
-  "instruction": "Draw or paint one hundred heads. Use reference for a few and redraw from memory after a certain time.",
+  "instruction": "- Analyse Photos which show facial expresison<br>- Then make a drawing after the photo.<br>- Redraw from memory<br>.",
   "hyperlinks": [
     "https://www.clipstudio.net/how-to-draw/archives/157239",
     "https://www.bodiesinmotion.photo/quick-draw"

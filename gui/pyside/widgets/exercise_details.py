@@ -22,7 +22,7 @@ class ExerciseSpreadSheet(QtWidgets.QWidget):
         self.instructionsGroup = QtWidgets.QGroupBox("Instructions:")
         self.instruction = QtWidgets.QLabel()
         self.instruction.setMinimumHeight(100)
-        self.instruction.setAlignment(QtCore.Qt.AlignCenter)
+        self.instruction.setAlignment(QtCore.Qt.AlignLeading)
         self.instruction.setFont(QtGui.QFont("Times", 10))
         self.instruction.setWordWrap(True)
         self.instructionsLayout = QtWidgets.QVBoxLayout()
@@ -31,7 +31,7 @@ class ExerciseSpreadSheet(QtWidgets.QWidget):
 
         self.linksGroup = QtWidgets.QGroupBox("Links:")
         self.links = QtWidgets.QLabel()
-        self.links.setAlignment(QtCore.Qt.AlignCenter)
+        self.links.setAlignment(QtCore.Qt.AlignLeading)
         self.links.setOpenExternalLinks(True)
         self.linksLayout = QtWidgets.QVBoxLayout()
         self.linksLayout.addWidget(self.links)

@@ -15,9 +15,15 @@
   "thumbnail": "feet.jpg",
   "template": "feet.clip",
   "instruction": "Draw or paint one hundred heads. Use reference for a few and redraw from memory after a certain time.",
-  "hyperlinks": [],
-  "references": [
-    "path/to/references"
+  "hyperlinks": [
+    "https://www.pinterest.ie/characterdesigh/character-anatomy-feet/",
+    "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d1318f63-9a36-4aa8-8ea7-6f0caafd1b86/d49k8ma-8e7d7725-98d3-40d1-9e98-81176bea8eba.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZDEzMThmNjMtOWEzNi00YWE4LThlYTctNmYwY2FhZmQxYjg2XC9kNDlrOG1hLThlN2Q3NzI1LTk4ZDMtNDBkMS05ZTk4LTgxMTc2YmVhOGViYS5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.QAOF0_QZNDCxEv_b5du-XudJXraqb093PeHjyodnh64",
+    "https://www.deviantart.com/adorkastock/art/50-Foot-Challenge-Pack-93-Foot-References-348837258"
+  ],
+  "reference_paths": [],
+  "reference_urls": [
+    "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/898847c9-817f-4a5c-a3ce-f67eba69ded0/d5rqcd4-289b4b10-21fc-4362-95de-51295b28d9a6.jpg",
+    "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/898847c9-817f-4a5c-a3ce-f67eba69ded0/d5s8832-c9cacdf1-0fe2-4479-aada-e6e91382f850.jpg"
   ],
   "references_tags": [
     "feet",
