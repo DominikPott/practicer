@@ -1,0 +1,19 @@
+{
+  "name": "color",
+  "label": "Color",
+  "level": 2.0,
+  "tags": [
+    "value",
+    "composition",
+    "painting",
+    "fundamental"
+  ],
+  "categories": [
+    "composition",
+    "color"
+  ],
+  "thumbnail": "color.jpg",
+  "template": "color.psd",
+  "instruction": "- Choose a triadic color scheme.<br>- Mix the colors to make them mostly gray and then paint . ..  just paint :)<br>- You might add white to one color to make this pop more.<br>- Make the picture look interesing, keep the values in the same range.",
+  "hyperlinks": []
+}
