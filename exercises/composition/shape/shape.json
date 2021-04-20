@@ -1,0 +1,24 @@
+{
+  "name": "shape",
+  "label": "Shape",
+  "level": 2.0,
+  "tags": [
+    "shape",
+    "composition",
+    "design",
+    "graphical",
+    "fundamental"
+  ],
+  "categories": [
+    "composition"
+  ],
+  "thumbnail": "shape.jpg",
+  "template": "shape.psd",
+  "instruction": "- Place the given shapes in interesting ways.<br>- Scaling, distoriton and duplication is allowed.<br>- You may also change the values of the elements.<br>- The goal is to make pictures which feel: static, dynamic, balanced or chaotic, calm or agressive.<br>- Try do draw attention to selected areas.",
+  "hyperlinks": [
+    "https://www.google.de/books/edition/Picture_This/f3QkDAAAQBAJ?hl=de&gbpv=1&printsec=frontcover",
+    "https://en.wikipedia.org/wiki/Composition_(visual_arts)",
+    "https://www.youtube.com/watch?v=SNmwQumlvbQ",
+    "https://www.youtube.com/watch?v=P6yJO9gKSAI"
+  ]
+}
