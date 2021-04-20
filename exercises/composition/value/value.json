@@ -1,0 +1,21 @@
+{
+  "name": "composition_value",
+  "label": "Value",
+  "level": 2.0,
+  "tags": [
+    "value",
+    "composition",
+    "painting",
+    "fundamental"
+  ],
+  "categories": [
+    "composition"
+  ],
+  "thumbnail": "value.jpg",
+  "template": "value.psd",
+  "instruction": "- Choose 2, 3, or 4 different Values.<br>- If painting after a reference, group the values into your choosen values.<br>- Consider also low or highkeys. There you want to group 2-3 of your chosen values together to be on ether on the dark or light side.",
+  "hyperlinks": [
+    "https://www.muddycolors.com/2012/08/composition-basics-value-structure/",
+    "https://makingamark.blogspot.com/2008/02/composition-why-tonal-values-and.html"
+  ]
+}
