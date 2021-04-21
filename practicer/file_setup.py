@@ -60,7 +60,7 @@ def version_up(path):
 
 def get_template(exercise, default_template):
     template = exercise.get("template", default_template)
-    if not os.path.exists(template):
+    if not os.path.isfile(template):
         template = default_template
     return template
 
