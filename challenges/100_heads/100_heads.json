@@ -1,0 +1,26 @@
+{
+  "name": "100_heads",
+  "label": "100 Heads",
+  "level": -1,
+  "tags": [
+    "anatomy",
+    "head",
+    "expression",
+    "intermediate",
+    "challenge"
+  ],
+  "categories": [
+    "challenge",
+    "anatomy",
+    "drawing",
+    "painting"
+  ],
+  "thumbnail": "100_heads.jpg",
+  "template": "100_heads.clip",
+  "instruction": "Draw 100 Heads",
+  "hyperlinks": [
+    "https://brushwarriors.com/100-heads-challenge/",
+    "https://www.clipstudio.net/how-to-draw/archives/157239",
+    "https://www.bodiesinmotion.photo/quick-draw"
+  ]
+}

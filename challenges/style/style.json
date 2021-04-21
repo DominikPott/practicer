@@ -1,0 +1,20 @@
+{
+  "name": "different_style",
+  "label": "Different Style",
+  "level": -1,
+  "tags": [
+    "challenge"
+  ],
+  "categories": [
+    "challenge",
+    "drawing",
+    "painting"
+  ],
+  "thumbnail": "different_style.jpg",
+  "template": "different_style.clip",
+  "instruction": "Recreate an image in 5-6 differnt styles.",
+  "hyperlinks": [
+    "https://brushwarriors.com/20-art-styles-challenge/",
+    "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d4326c8f-09a2-4a49-8d06-905083b443a2/dbsk2cv-74e3faed-9504-4491-b914-05e4f4650976.png/v1/fill/w_1280,h_792,q_80,strp/___10_style_challenge_by_sinix_dbsk2cv-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD03OTIiLCJwYXRoIjoiXC9mXC9kNDMyNmM4Zi0wOWEyLTRhNDktOGQwNi05MDUwODNiNDQzYTJcL2Ric2syY3YtNzRlM2ZhZWQtOTUwNC00NDkxLWI5MTQtMDVlNGY0NjUwOTc2LnBuZyIsIndpZHRoIjoiPD0xMjgwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.ndGdImoX5c1htnH85hX1nvy7AeFodnXSTcz2bNqMoZw"
+  ]
+}

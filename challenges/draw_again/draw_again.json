@@ -1,0 +1,19 @@
+{
+  "name": "draw_again",
+  "label": "Draw Again",
+  "level": -1,
+  "tags": [
+    "challenge"
+  ],
+  "categories": [
+    "challenge",
+    "drawing",
+    "painting"
+  ],
+  "thumbnail": "draw_again.jpg",
+  "template": "draw_again.clip",
+  "instruction": "Choose an old drawing or painting and recreate it!",
+  "hyperlinks": [
+    "https://www.boredpanda.com/draw-me-again-improved-skills/?utm_source=google&utm_medium=organic&utm_campaign=organic"
+  ]
+}

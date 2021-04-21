@@ -13,15 +13,9 @@
     "painting"
   ],
   "thumbnail": "edges.jpg",
-  "template": "edges.clip",
+  "template": "edges.psd",
   "instruction": "Work on hard and soft edges and or lost and found edges.Try blending forms with hard and soft edges. . ..",
-  "references": [
-    "path/to/references"
-  ],
-  "references_tags": [
-    "painting"
-  ],
   "hyperlinks": [
-    "www.google.com"
+    "https://drawpaintacademy.com/edges/"
   ]
 }
