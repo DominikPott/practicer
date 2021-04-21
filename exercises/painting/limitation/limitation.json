@@ -1,0 +1,16 @@
+{
+  "name": "limitation",
+  "label": "Limitation",
+  "level": 1.5,
+  "tags": [
+    "painting",
+    "fundamental"
+  ],
+  "categories": [
+    "painting"
+  ],
+  "thumbnail": "limitation.jpg",
+  "template": "limitation.psd",
+  "instruction": "Simplify the refernce into big brushstrockes. Zoom out of the picture while painting.",
+  "hyperlinks": ["https://www.heavypaint.app/"]
+}

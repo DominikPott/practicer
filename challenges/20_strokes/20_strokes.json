@@ -1,0 +1,19 @@
+{
+  "name": "20_strokes",
+  "label": "20 Strokes",
+  "level": 4,
+  "tags": [
+    "limitation",
+    "intermediate",
+    "challenge",
+    "reduction"
+  ],
+  "categories": [
+    "challenge",
+    "painting"
+  ],
+  "thumbnail": "20_strokes.jpg",
+  "template": "20_strokes.psd",
+  "instruction": "Draw a Landscape with a maximum of 20 Strokes.",
+  "hyperlinks": []
+}
