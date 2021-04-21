@@ -1,0 +1,17 @@
+{
+  "name": "5_minutes",
+  "label": "5 Minutes",
+  "level": 2.0,
+  "tags": [
+    "painting",
+    "color"
+  ],
+  "categories": [
+    "speedpainting"
+  ],
+  "thumbnail": "5_minutes.jpg",
+  "template": "5_minutes.psd",
+  "instruction": "Work on hard and soft edges and or lost and found edges.Try blending forms with hard and soft edges. . .."
+
+  "hyperlinks": []
+}
