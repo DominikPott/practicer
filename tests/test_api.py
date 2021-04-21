@@ -1,4 +1,4 @@
-import api
+import practicer.api as api
 
 
 def test_exercises():

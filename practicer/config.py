@@ -25,7 +25,6 @@ def _write_default_config(path):
     config["TEMPLATE"] = {"DEFAULT": PACKAGE_DIR / "templates/default.psd"}
     config["EXERCISES"] = {"PATH": PACKAGE_DIR / "exercises"}
     config["WORK"] = {"PATH": "Z:/zeichnungen"}
-    config["REFERENCES"] = {"PATH": "Z:/referenzen/Fashion"}
     config["STATS"] = {"PATH": PACKAGE_DIR / "fs_exercise_stats"}
 
     with open(path, "w") as fp:
