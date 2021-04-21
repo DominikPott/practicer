@@ -6,7 +6,6 @@ import pathlib
 import practicer.config
 
 CONFIG = practicer.config.load()
-DEFAULT_STATS = {'level': 0, 'progress': 0.0, 'level_max_progress': 1}
 
 log = logging.getLogger('practicer')
 log.setLevel(logging.DEBUG)
@@ -20,13 +19,6 @@ def update_exercise_stats(exercise, stats):
 
 
 def load_stats(exercise):
-    try:
-        return _load_stats_file(exercise)
-    except FileNotFoundError:
-        return DEFAULT_STATS
-
-
-def _load_stats_file(exercise):
     filepath = _exercise_path(exercise)
     with open(filepath) as fp:
         return json.load(fp)
