@@ -1,4 +1,4 @@
-from PySide6 import QtWidgets, QtCore, QtGui
+from PySide2 import QtWidgets, QtCore, QtGui
 import practicer.gui.pyside.resources  # pyside compiles resources. Holds the icons for qresources
 
 
