@@ -8,7 +8,6 @@ from practicer.gui.pyside.app import PractiseApp
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     exercises = practicer.api.exercises()
-    #exercises = [{"name": "test"}]
     w = PractiseApp(exercises=exercises)
     w.show()
     sys.exit(app.exec_())

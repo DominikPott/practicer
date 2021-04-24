@@ -58,7 +58,7 @@ class ExerciseList(QtWidgets.QWidget):
             categorie = exercise.get('categories', ["uncategoriezed"])[0].title()
             sections.setdefault(categorie, []).append(exercise)
 
-        for section, exercises in sections.items():
+        for section, exercises in sorted(sections.items()):
             section_item = QtWidgets.QTreeWidgetItem(self.exercises_widget, [section])
             for exercise in exercises:
                 name = exercise.get("label", "No Label").title()
