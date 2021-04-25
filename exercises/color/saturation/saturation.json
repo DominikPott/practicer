@@ -1,19 +1,20 @@
 {
-  "name": "color",
-  "label": "Color",
+  "name": "saturation",
+  "label": "Saturation",
   "level": 2.0,
   "tags": [
-    "value",
+    "saturation",
     "composition",
     "painting",
     "fundamental"
   ],
   "categories": [
+    "color",
     "composition",
-    "color"
+    "painting"
   ],
-  "thumbnail": "color.jpg",
-  "template": "color.psd",
+  "thumbnail": "saturation.jpg",
+  "template": "saturation.psd",
   "instruction": "- Choose a triadic color scheme.<br>- Mix the colors to make them mostly gray and then paint . ..  just paint :)<br>- You might add white to one color to make this pop more.<br>- Make the picture look interesing, keep the values in the same range.",
   "hyperlinks": []
 }
