@@ -1,12 +1,7 @@
-import logging
-
 import practicer.config as config
 import practicer.exercise_interface as exercise_interface
 import practicer.file_setup as file_setup
 import practicer.exercise_stats.api as exercise_stats
-
-log = logging.getLogger("practicer")
-log.setLevel(logging.DEBUG)
 
 CONFIG = config.load()
 

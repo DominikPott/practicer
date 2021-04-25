@@ -1,4 +1,3 @@
-import logging
 import json
 import os
 import pathlib
@@ -6,9 +5,6 @@ import pathlib
 import practicer.config
 
 CONFIG = practicer.config.load()
-
-log = logging.getLogger('practicer')
-log.setLevel(logging.DEBUG)
 
 
 def update_exercise_stats(exercise, stats):

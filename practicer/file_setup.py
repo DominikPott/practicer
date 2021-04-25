@@ -1,15 +1,10 @@
 import shutil
 import datetime
 import os
-import logging
 import glob
 import webbrowser
 
-
-logging.basicConfig()
-log = logging.getLogger("daily_setup")
-
-log.setLevel(logging.INFO)
+from practicer import log
 
 
 def create(exercise, workpath, template):
@@ -67,6 +62,5 @@ def get_template(exercise, default_template):
 
 def copy_template(src, dst):
     _, ext = os.path.splitext(src)
-    shutil.copy2(src, dst+ext)
-    return dst+ext
-
+    shutil.copy2(src, dst + ext)
+    return dst + ext
