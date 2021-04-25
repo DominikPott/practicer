@@ -9,8 +9,8 @@ class ExerciseList(QtWidgets.QWidget):
         super(ExerciseList, self).__init__(parent)
         self._exercises = exercises
 
-        # self.filter = QtWidgets.QLineEdit()
-        # self.filter.setPlaceholderText("tag filter")
+        self.filter = QtWidgets.QLineEdit()
+        self.filter.setPlaceholderText("tag filter")
 
         self.exercise_model = ExerciseModel(exercises=self._exercises)
         self.filter_proxy = QtCore.QSortFilterProxyModel()
@@ -24,7 +24,7 @@ class ExerciseList(QtWidgets.QWidget):
         self.exercise_view.expandAll()
 
         layout = QtWidgets.QVBoxLayout()
-        # layout.addWidget(self.filter)
+        layout.addWidget(self.filter)
         layout.addWidget(self.exercise_view)
         self.setLayout(layout)
 
