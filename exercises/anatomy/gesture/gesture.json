@@ -14,7 +14,7 @@
     "painting"
   ],
   "thumbnail": "gesture.jpg",
-  "template": "gesture.clip",
+  "template": "gesture.psd",
   "instruction": "Draw or paint one hundred heads. Use reference for a few and redraw from memory after a certain time.",
   "hyperlinks": [
     "https://www.bodiesinmotion.photo/quick-draw"
