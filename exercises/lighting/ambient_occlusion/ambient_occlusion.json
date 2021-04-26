@@ -12,16 +12,7 @@
     "light"
   ],
   "thumbnail": "ambient_occlusion.jpg",
-  "template": "ambient_occlusion.clip",
+  "template": "ambient_occlusion.psd",
   "instruction": "Paint the Ambient Occlusion for different Objects. Paint a simple object and add lights from different directions. These should vary in color and intensity.",
-  "references": [
-    "path/to/references"
-  ],
-  "references_tags": [
-    "light",
-    "painting",
-    "color",
-    "ambient occlusion"
-  ],
   "hyperlinks": []
 }
