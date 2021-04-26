@@ -24,7 +24,6 @@ def _write_default_config(path):
 
     config["TEMPLATE"] = {"DEFAULT": PACKAGE_DIR / "resources/templates/default.psd"}
     config["EXERCISES"] = {"PATH": PACKAGE_DIR / "exercises"}
-    config["CHALLENGES"] = {"PATH": PACKAGE_DIR / "challenges"}
     config["WORK"] = {"PATH": PACKAGE_DIR / "drawings"}
     config["STATS"] = {"PATH": PACKAGE_DIR / "fs_exercise_stats"}
 

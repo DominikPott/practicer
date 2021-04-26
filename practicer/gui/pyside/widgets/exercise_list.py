@@ -98,3 +98,8 @@ class ExerciseItem(QtGui.QStandardItem):
         self.setText(text)
         self.setEditable(False)
         self.setFont(font)
+
+
+class TagFilterProxyModel(QtCore.QSortFilterProxyModel):
+    def filterAcceptsRow(self, source_row, source_parent):
+        pass
