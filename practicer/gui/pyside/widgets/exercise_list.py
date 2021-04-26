@@ -1,8 +1,7 @@
-from PySide2 import QtWidgets, QtCore, QtGui
+from PySide2 import QtWidgets, QtCore
 
 
 class ExerciseList(QtWidgets.QWidget):
-
     changed = QtCore.Signal(object)
     double_clicked = QtCore.Signal(object)
 
@@ -80,6 +79,3 @@ class ExerciseList(QtWidgets.QWidget):
         exercise = item.data(0, QtCore.Qt.UserRole)
         if exercise:
             self.double_clicked.emit(exercise)
-
-
-
