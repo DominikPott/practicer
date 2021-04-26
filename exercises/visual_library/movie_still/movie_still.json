@@ -1,0 +1,16 @@
+{
+  "name": "movie_still",
+  "label": "Movie Still",
+  "level": 3.0,
+  "tags": [
+    "visual library",
+    "fundamental"
+  ],
+  "categories": [
+    "visual library"
+  ],
+  "thumbnail": "",
+  "template": "",
+  "instruction": "Paint a Still frame from a movie.",
+  "hyperlinks": []
+}
