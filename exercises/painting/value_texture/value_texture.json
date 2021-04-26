@@ -11,15 +11,8 @@
   "categories": [
     "painting"
   ],
-  "template": "value_texture.clip",
+  "template": "value_texture.psd",
   "thumbnail": "value_texture.jpg",
   "instruction": "Paint basic and simple Objects and blend a photo texture into it. Paint imaginative or refernced simple objects. Blend a phototexture into some area and adjust its values to match your painting.",
-  "hyperlinks": [],
-  "references": [
-    "path/to/references"
-  ],
-  "references_tags": [
-    "value",
-    "painting"
-  ]
+  "hyperlinks": []
 }

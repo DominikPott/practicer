@@ -2,12 +2,20 @@
   "name": "bounce_light",
   "label": "Bounce Light",
   "level": 3.0,
-  "tags": ["value", "painting", "bounce light", "color", "fundamental"],
-  "categories": ["light"],
+  "tags": [
+    "value",
+    "painting",
+    "bounce light",
+    "color",
+    "fundamental"
+  ],
+  "categories": [
+    "light"
+  ],
   "thumbnail": "bounce_light.jpg",
-  "template": "bounce_light.clip",
+  "template": "bounce_light.psd",
   "instruction": "Paint the effect of light bouncing of objects and onto others. Paint the effect of light bouncing of objects and onto others.",
-  "hyperlinks": ["https://www.drawing.com"],
-  "references": ["path/to/references"],
-  "references_tags": ["light", "painting", "color", "bounce light"]
+  "hyperlinks": [
+    "https://www.drawing.com"
+  ]
 }

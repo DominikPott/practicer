@@ -13,15 +13,7 @@
     "light"
   ],
   "thumbnail": "light_schemas.jpg",
-  "template": "light_schemas.clip",
+  "template": "light_schemas.psd",
   "instruction": "Paint different light types on simple forms. Key, Fill, Bounce, . .. Paint a simple object and add lights from different directions. These should vary in color and intensity.",
-  "references": [
-    "path/to/references"
-  ],
-  "references_tags": [
-    "light",
-    "painting",
-    "color"
-  ],
   "hyperlinks": []
 }

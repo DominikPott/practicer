@@ -14,7 +14,7 @@
     "painting"
   ],
   "thumbnail": "expression.jpg",
-  "template": "expression.clip",
+  "template": "expression.psd",
   "instruction": "- Analyse Photos which show facial expresison<br>- Then make a drawing after the photo.<br>- Redraw from memory<br>.",
   "hyperlinks": [
     "https://www.clipstudio.net/how-to-draw/archives/157239",

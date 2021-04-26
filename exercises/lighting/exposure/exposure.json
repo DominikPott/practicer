@@ -13,18 +13,9 @@
     "light"
   ],
   "thumbnail": "exposure.jpg",
-  "template": "exposure.clip",
+  "template": "exposure.psd",
   "instruction": "Choose under or overexposed and adjust the values and colors on the objects accordingly.",
   "hyperlinks": [
     "https://en.wikipedia.org/wiki/Exposure_(photography)"
-  ],
-  "references": [
-    "path/to/references"
-  ],
-  "references_tags": [
-    "light",
-    "painting",
-    "color",
-    "exposure"
   ]
 }
