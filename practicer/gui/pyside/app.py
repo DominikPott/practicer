@@ -31,10 +31,11 @@ class PractiseApp(QtWidgets.QMainWindow):
         self.mainLayout.addWidget(self.exercises)
         self.mainLayout.addWidget(self.exercise_details)
 
+        self.layout().setSizeConstraint(self.layout().SetFixedSize)
+
         self.exercises.changed.connect(self.exercise_changed)
         self.exercises.double_clicked.connect(self.start_exercise)
         self.statusBar().showMessage("Starting Practiver", 3000)
-        self.adjustSize()
 
     def exercise_changed(self, new_exercise):
         stats = practicer.api.stats(new_exercise)
