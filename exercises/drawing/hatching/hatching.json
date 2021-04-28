@@ -1,0 +1,18 @@
+{
+  "name": "hatching",
+  "label": "Hatching",
+  "level": 3.0,
+  "categories": [
+    "drawing"
+  ],
+  "tags": [
+    "line",
+    "hatching",
+    "drawing",
+    "fundamental"
+  ],
+  "thumbnail": "hatching.jpg",
+  "template": "hatching.psd",
+  "instruction": "An exercise to practice different lineweights for inside/outside lines.Paint overlapping objects and assign differnt lineweights to show the form /position / lighting",
+  "hyperlinks": []
+}
