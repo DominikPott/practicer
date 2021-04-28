@@ -50,6 +50,7 @@ class ExerciseSpreadSheet(QtWidgets.QWidget):
         self.additional_layout = QtWidgets.QHBoxLayout()
         self.additional_layout.addWidget(self.statsGroup)
         self.additional_layout.addWidget(self.linksGroup)
+        self.additional_layout.setMargin(0)
         self.additional.setLayout(self.additional_layout)
 
         self.setLayout(QtWidgets.QVBoxLayout())
