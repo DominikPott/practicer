@@ -10,8 +10,12 @@
     "storytelling",
     "story"
   ],
-  "thumbnail": "story.jpg",
-  "template": "story.psd",
+  "thumbnail": "",
+  "template": "",
   "instruction": "Include story elements inside your painting / illustration",
-  "hyperlinks": []
+  "hyperlinks": [
+    "https://www.youtube.com/watch?v=TUCcx-S4DeA",
+    "https://www.artistsnetwork.com/magazine/turn-picture-story-painting-boats/",
+    "https://www.youtube.com/watch?v=cAZjDFT0dFI"
+  ]
 }

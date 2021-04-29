@@ -15,14 +15,6 @@
   ],
   "thumbnail": "material.jpg",
   "template": "material.psd",
-  "instruction": "Construct the shadow of simple grids and sticks. These can be cast on other objects. Try different lights to see the effect of hard or soft shadows.",
-  "references": [
-    "path/to/references"
-  ],
-  "references_tags": [
-    "light",
-    "painting",
-    "color"
-  ],
+  "instruction": "Choose an object which has the material you want to study.<br>Make a sketch of it where you analyse how diffuse / reflective/ transparent / coated it is.<br>Repaint a simple sphere in the material with the reference by its side.<br>Redraw the sphere from memory.<br>Redraw the object from memory.<br>",
   "hyperlinks": []
 }

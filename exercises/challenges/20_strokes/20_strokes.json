@@ -14,6 +14,10 @@
   ],
   "thumbnail": "20_strokes.jpg",
   "template": "20_strokes.psd",
-  "instruction": "Draw a Landscape with a maximum of 20 Strokes.",
-  "hyperlinks": []
+  "instruction": "Draw a Landscape with a maximum of 20 Strokes.<br>Focus on the essential big shapes to transport the mood.",
+  "hyperlinks": [
+    "https://twitter.com/nathanfowkesart/status/1348746293019963393",
+    "https://www.volquardsen.art/en/2020/10/01/the-20-strokes-challenge/",
+    "https://www.heavypaint.app/"
+  ]
 }
