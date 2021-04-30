@@ -10,8 +10,12 @@
   "categories": [
     "composition"
   ],
-  "thumbnail": "",
-  "template": "",
+  "thumbnail": "contrast.jpg",
+  "template": "contrast.psd",
   "instruction": "Lookup Ittens seven contrast rules.",
-  "hyperlinks": []
+  "hyperlinks": [
+    "https://de.zxc.wiki/wiki/Sieben_Farbkontraste",
+    "https://www.paintingandartists.com/7-colors-contrast-by-johannes-itten",
+    "https://en.wikipedia.org/wiki/Johannes_Itten"
+  ]
 }
