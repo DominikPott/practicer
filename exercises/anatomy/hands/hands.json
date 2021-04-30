@@ -1,6 +1,7 @@
 {
   "name": "hands",
   "label": "Hands",
+  "uuid": "b1e8b07c-b5d1-446e-8d6b-c3a80c2cf924",
   "level": 5.0,
   "tags": [
     "anatomy",
@@ -17,14 +18,5 @@
   "instruction": "Draw or paint one hundred hands. Use reference for a few and redraw from memory after a certain time.",
   "hyperlinks": [
     "https://www.gvaat.com/blog/how-to-draw-the-hands-a-simple-step-by-step-guide/"
-  ],
-  "references": [
-    "Z:\\referenzen\\Anatomy"
-  ],
-  "references_tags": [
-    "hands",
-    "drawing",
-    "anatomy",
-    "painting"
   ]
 }

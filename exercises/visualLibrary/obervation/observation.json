@@ -1,6 +1,7 @@
 {
   "name": "obeservation",
   "label": "Observation",
+  "uuid": "494ecd51-087b-46d7-9170-4f7202d2fa09",
   "level": 1.0,
   "tags": [
     "visual library",

@@ -1,6 +1,7 @@
 {
   "name": "line_weight",
   "label": "Line Weight",
+  "uuid": "568b9260-331b-4169-8766-f60fc967ba5e",
   "level": 2.0,
   "categories": [
     "drawing"

@@ -1,6 +1,7 @@
 {
   "name": "5_minutes",
   "label": "5 Minutes",
+  "uuid": "2ffc4556-7f63-434f-adf1-62441df47f1e",
   "level": 2.0,
   "tags": [
     "painting",
@@ -12,6 +13,5 @@
   "thumbnail": "5_minutes.jpg",
   "template": "5_minutes.psd",
   "instruction": "Paint for 5 Minutes with a friend.",
-
   "hyperlinks": []
 }

@@ -1,6 +1,7 @@
 {
   "name": "line_control",
   "label": "Line Control",
+  "uuid": "207105f3-8b8d-4cf8-b642-4e493014c772",
   "level": 2.0,
   "tags": [
     "line",
@@ -16,13 +17,5 @@
   "instruction": "An exercise to practice different drawing lines and circles to improce muscle memory. Draw lines in the marked areas. Draw perfect circles",
   "hyperlinks": [
     "https://drawabox.com"
-  ],
-  "references": [
-    "path/to/references"
-  ],
-  "references_tags": [
-    "line",
-    "lineweight",
-    "drawing"
   ]
 }

@@ -1,6 +1,7 @@
 {
   "name": "expression",
   "label": "Facial Expression",
+  "uuid": "e5784ed8-6279-4aac-8901-cd518da33ee7",
   "level": 7.5,
   "tags": [
     "anatomy",
@@ -19,17 +20,5 @@
   "hyperlinks": [
     "https://www.clipstudio.net/how-to-draw/archives/157239",
     "https://www.bodiesinmotion.photo/quick-draw"
-  ],
-  "reference_paths": [
-    "Z:\\referenzen\\Expression"
-  ],
-  "reference_urls": [
-    "https://cdna.artstation.com/p/assets/images/images/024/468/164/large/magda-proski-magdalena-proszowska-cherry.jpg"
-  ],
-  "references_tags": [
-    "expression",
-    "drawing",
-    "anatomy",
-    "painting"
   ]
 }

@@ -1,6 +1,7 @@
 {
   "name": "time_of_day",
   "label": "Time of Day",
+  "uuid": "33dcd3d5-3c11-4267-97f9-800ebbc20a7f",
   "level": 3.5,
   "tags": [
     "value",

@@ -1,6 +1,7 @@
 {
   "name": "ambient_occlusion",
   "label": "Ambient Occlusion",
+  "uuid": "36ec82ef-7719-40ae-bced-8816935588be",
   "level": 3.0,
   "tags": [
     "value",

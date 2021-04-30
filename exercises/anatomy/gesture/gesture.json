@@ -1,6 +1,7 @@
 {
   "name": "gesture",
   "label": "Gesture",
+  "uuid": "41a89e1c-db9c-46fa-bd1b-64f84e11c2d2",
   "level": 2.5,
   "tags": [
     "anatomy",
@@ -18,14 +19,5 @@
   "instruction": "Draw or paint one hundred heads. Use reference for a few and redraw from memory after a certain time.",
   "hyperlinks": [
     "https://www.bodiesinmotion.photo/quick-draw"
-  ],
-  "references": [
-    "path/to/references"
-  ],
-  "references_tags": [
-    "gesture",
-    "drawing",
-    "anatomy",
-    "painting"
   ]
 }
