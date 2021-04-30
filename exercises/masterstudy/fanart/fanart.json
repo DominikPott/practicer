@@ -1,0 +1,17 @@
+{
+  "name": "fanart",
+  "label": "Fanart",
+  "level": 2.5,
+  "tags": [
+    "painting",
+    "color",
+    "intermediate"
+  ],
+  "categories": [
+    "masterstudy"
+  ],
+  "thumbnail": "fanart.jpg",
+  "template": "fanart.psd",
+  "instruction": "Make a fanDart of your favorite artworks.",
+  "hyperlinks": []
+}
