@@ -14,6 +14,10 @@
   ],
   "thumbnail": "optical_gray.jpg",
   "template": "optical_gray.psd",
-  "instruction": "Mix colors so that they become optical gray at a distance. The values of the colors should be equal.",
-  "hyperlinks": []
+  "instruction": "<b>Nathan Fowkes - How to Paint Landscapes Quickly and Beautifully</b>:<br>Choose three Colors, evenly seperated on the color wheel.<br>They should have the same optical brightness. Now place them dotwise next to each other.Make an evenly and equal distribution.<br>The goal is that the colors should optical mix to gray when looked at from  a distance.",
+  "hyperlinks": [
+    "http://www.nathanfowkesart.com/",
+    "https://en.wikipedia.org/wiki/Impressionism#/media/File:Camille_Pissarro_019.jpg",
+    "https://en.wikipedia.org/wiki/File:Claude_Monet,_Le_Grand_Canal.jpg"
+  ]
 }
