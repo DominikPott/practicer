@@ -17,5 +17,9 @@
   "thumbnail": "thumbnail.jpg",
   "template": "thumbnail.psd",
   "instruction": "Study Masterpaintings by generating thumbnails. Paint a miniture masterstudy. Focus on Value, Composition, Edges and Color.",
-  "hyperlinks": ["https://www.youtube.com/watch?v=qe6thgSaJKE"]
+  "hyperlinks": [
+    "https://www.youtube.com/watch?v=qe6thgSaJKE",
+    "https://www.proko.com/developing-your-style-by-studying-the-masters",
+    "https://www.youtube.com/watch?v=zF003DnMpog"
+  ]
 }

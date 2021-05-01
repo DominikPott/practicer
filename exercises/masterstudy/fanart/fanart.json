@@ -13,6 +13,9 @@
   ],
   "thumbnail": "fanart.jpg",
   "template": "fanart.psd",
-  "instruction": "Make a fanart of your favorite artworks.",
-  "hyperlinks": []
+  "instruction": "Make fanart of your favorite artworks.",
+  "hyperlinks": [
+    "https://www.deviantart.com/topic/fan-art",
+    "https://en.wikipedia.org/wiki/Fan_art"
+  ]
 }
