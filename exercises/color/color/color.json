@@ -1,0 +1,21 @@
+{
+  "name": "color",
+  "label": "Color",
+  "uuid": "f9bd2f32-2996-4907-ae9a-8cd57e86bd2c",
+  "level": 2.0,
+  "tags": [
+    "color",
+    "composition",
+    "painting",
+    "fundamental"
+  ],
+  "categories": [
+    "color",
+    "composition",
+    "painting"
+  ],
+  "thumbnail": "color.jpg",
+  "template": "color.psd",
+  "instruction": "Choose three colors, equally seperated on the color wheel (substractive colorwheel).<br>Mix them all together to make three desaturated / grayisch variant.<br>Paint a picture and notice how the dull colors bring each other do life.<br>For a little bit of contrast, put down a single stroke of a more saturated color.",
+  "hyperlinks": ["http://www.nathanfowkesart.com/2014/08/painting-exercise.html?spref=pi"]
+}
