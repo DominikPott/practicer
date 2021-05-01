@@ -15,5 +15,5 @@
   "thumbnail": "color_picking.jpg",
   "template": "color_picking.psd",
   "instruction": "- Choose a reference<br>- Pick some colors from the reference and draw simple boxes<br>- In a new Painting, estimate the hue, value and saturation. Paint also the boxes.<br>- If the color is off, try again up to two more times per box.",
-  "hyperlinks": []
+  "hyperlinks": ["https://www.youtube.com/watch?v=uuzJ6a7-s28"]
 }
