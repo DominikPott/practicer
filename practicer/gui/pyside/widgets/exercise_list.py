@@ -22,8 +22,8 @@ class ExerciseList(QtWidgets.QWidget):
         self._populate()
 
         self.filter.textChanged.connect(self._populate)
-        self.exercises_widget.clicked.connect(self._changed_signal)
-        self.exercises_widget.doubleClicked.connect(self._double_clicked)
+        self.exercises_widget.currentItemChanged.connect(self._changed_signal)
+        self.exercises_widget.itemDoubleClicked.connect(self._double_clicked)
 
     def exercise_tags(self):
         tags = []
@@ -68,14 +68,12 @@ class ExerciseList(QtWidgets.QWidget):
         self.exercises_widget.setItemsExpandable(False)
         self.exercises_widget.setRootIsDecorated(False)
 
-    def _changed_signal(self, index):
-        item = self.exercises_widget.itemFromIndex(index)
+    def _changed_signal(self, item):
         exercise = item.data(0, QtCore.Qt.UserRole)
         if exercise:
             self.changed.emit(exercise)
 
-    def _double_clicked(self, index):
-        item = self.exercises_widget.itemFromIndex(index)
+    def _double_clicked(self, item):
         exercise = item.data(0, QtCore.Qt.UserRole)
         if exercise:
             self.double_clicked.emit(exercise)
