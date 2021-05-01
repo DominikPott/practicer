@@ -1,0 +1,21 @@
+{
+  "name": "100_days",
+  "label": "100 Days",
+  "uuid": "fd32be84-3fab-4903-8f03-89acfb56e23b",
+  "level": -1,
+  "tags": [
+    "beginner",
+    "challenge"
+  ],
+  "categories": [
+    "challenge",
+    "drawing",
+    "painting"
+  ],
+  "thumbnail": "100_days.jpg",
+  "template": "100_days.psd",
+  "instruction": "Draw and paint every day for 100 Days.",
+  "hyperlinks": [
+    "https://www.youtube.com/watch?v=Ic1h_4JXZcI"
+  ]
+}
