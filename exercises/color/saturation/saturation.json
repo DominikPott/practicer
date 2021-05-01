@@ -1,10 +1,11 @@
 {
   "name": "saturation",
-  "label": "Saturation",
+  "label": "Hue and Saturation",
   "uuid": "2143ace5-c7d4-4817-8ba9-b390e471881c",
   "level": 2.0,
   "tags": [
     "saturation",
+    "hue",
     "composition",
     "painting",
     "fundamental"
@@ -16,6 +17,6 @@
   ],
   "thumbnail": "saturation.jpg",
   "template": "saturation.psd",
-  "instruction": "- Choose a triadic color scheme.<br>- Mix the colors to make them mostly gray and then paint . ..  just paint :)<br>- You might add white to one color to make this pop more.<br>- Make the picture look interesing, keep the values in the same range.",
-  "hyperlinks": []
+  "instruction": "After <b>Nathan Fowkes</b>: Blend together colors that have contrast of hue and saturation in any way you find interesting. Make sure the colors have very litthe contrast. ",
+  "hyperlinks": ["http://www.nathanfowkesart.com/"]
 }
