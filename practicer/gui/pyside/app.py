@@ -7,6 +7,13 @@ import practicer.gui.pyside.resources  # compiled pyside resources.qrc file whic
 import practicer.api
 
 
+def run(exercises):
+    app = QtWidgets.QApplication(sys.argv)
+    w = PractiseApp(exercises=exercises)
+    w.show()
+    sys.exit(app.exec_())
+
+
 class PractiseApp(QtWidgets.QMainWindow):
 
     def __init__(self, exercises, parent=None):
@@ -50,11 +57,3 @@ def load_stylesheet():
     stylesheet = QtCore.QFile(":/stylesheets/darkorange.qss")
     stylesheet.open(QtCore.QFile.ReadOnly | QtCore.QFile.Text)
     return QtCore.QTextStream(stylesheet).readAll()
-
-
-if __name__ == '__main__':
-    app = QtWidgets.QApplication(sys.argv)
-    exercises = practicer.api.exercises()
-    w = PractiseApp(exercises=exercises)
-    w.show()
-    sys.exit(app.exec_())

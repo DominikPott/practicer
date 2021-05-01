@@ -1,13 +1,11 @@
-import sys
-
-from PySide2 import QtWidgets
-
 import practicer.api
-from practicer.gui.pyside.app import PractiseApp
+import practicer.gui.pyside.app
+import practicer.gui.web.app
+
+ui_factory = {'desktop': practicer.gui.pyside.app.run, "web": practicer.gui.web.app.run}
 
 if __name__ == '__main__':
-    app = QtWidgets.QApplication(sys.argv)
     exercises = practicer.api.exercises()
-    w = PractiseApp(exercises=exercises)
-    w.show()
-    sys.exit(app.exec_())
+
+    ui = ui_factory['desktop']
+    ui(exercises=exercises)
