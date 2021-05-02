@@ -3,11 +3,11 @@
 
 block_cipher = None
 
-
 a = Analysis(['../practicer/app.py'],
              pathex=['D:\\01_Projects\\14_programming\\practicer\\practicer'],
              binaries=[],
-             datas=[('./../exercises/*', './exercises'), ('./../practicer/resources/templates', './resources/templates')],
+             datas=[('./../practicer/resources/exercises/*', './practicer/resources/exercises'),
+                    ('./../practicer/resources/templates', './practicer/resources/templates')],
              hiddenimports=[],
              hookspath=[],
              runtime_hooks=[],
@@ -17,7 +17,7 @@ a = Analysis(['../practicer/app.py'],
              cipher=block_cipher,
              noarchive=False)
 pyz = PYZ(a.pure, a.zipped_data,
-             cipher=block_cipher)
+          cipher=block_cipher)
 exe = EXE(pyz,
           a.scripts,
           [],
