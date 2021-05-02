@@ -1,4 +1,5 @@
-/fs_exercise_stats/
-/config.cfg
+*fs_exercise_stats/
 /pyInstaller/build/
 /pyInstaller/dist/
+*.cfg
+*.pyc
