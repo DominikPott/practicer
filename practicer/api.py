@@ -8,6 +8,7 @@ CONFIG = config.load()
 
 def exercises():
     exercise_path = CONFIG["EXERCISES"]["PATH"]
+    print(exercise_path)
     return exercise_interface.exercises(root=exercise_path)
 
 
