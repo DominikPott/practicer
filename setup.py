@@ -4,7 +4,7 @@ setup(
     name='practicer',
     version='0.1',
     packages=['practicer.gui', 'practicer.gui.pyside', 'practicer.gui.pyside.widgets', 'tests', 'practicer',
-              'practicer.exercise_stats', 'exercises'],
+              'practicer.exercise_stats'],
     url='https://github.com/DominikPott/practicer/',
     license='MIT',
     author='Dominik',
