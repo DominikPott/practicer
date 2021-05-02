@@ -9,5 +9,6 @@ setup(
     license='MIT',
     author='Dominik',
     author_email='dominikpott@gmail.com',
-    description='A Collection of Painting Exercises'
+    description='A Collection of Painting Exercises',
+    python_requires=">=3"
 )
