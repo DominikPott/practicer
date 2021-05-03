@@ -2,13 +2,14 @@ import practicer.config as config
 import practicer.exercise_interface as exercise_interface
 import practicer.file_setup as file_setup
 import practicer.exercise_stats.api as exercise_stats
+from practicer import log
 
 CONFIG = config.load()
 
 
 def exercises():
     exercise_path = CONFIG["EXERCISES"]["PATH"]
-    print(exercise_path)
+    log.debug("ExercisePath:" + exercise_path)
     return exercise_interface.exercises(root=exercise_path)
 
 
