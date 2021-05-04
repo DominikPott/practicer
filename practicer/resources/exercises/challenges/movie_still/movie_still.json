@@ -1,0 +1,20 @@
+{
+  "name": "movie_still",
+  "label": "Movie Still",
+  "level": 3.0,
+  "tags": [
+    "challenge",
+    "lighting",
+    "composition"
+  ],
+  "categories": [
+    "challenge",
+    "painting",
+    "lighting",
+    "composition"
+  ],
+  "thumbnail": "movie_still.jpg",
+  "template": "movie_still.psd",
+  "instruction": "Paint a Still frame from a movie.",
+  "hyperlinks": []
+}
