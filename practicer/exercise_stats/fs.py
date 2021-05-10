@@ -23,5 +23,5 @@ def load_stats(exercise):
 def _exercise_path(exercise):
     stats_dir = CONFIG['STATS']['PATH']
     filepath = pathlib.Path(stats_dir)
-    name = exercise.get('name', 'default')
-    return filepath / (name + '.json')
+    exercise_id = exercise.get('uuid', 'noId')
+    return filepath / (exercise_id + '.json')
