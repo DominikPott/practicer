@@ -12,7 +12,7 @@
     "painting"
   ],
   "thumbnail": "form_change.jpg",
-  "template": "form_change.clip",
+  "template": "form_change.psd",
   "instruction": "Paint objects which have complex form changes and shade them accordingly. Study the value / color behaviour of form changes on complex objects. Holes, half_spheres and other transition between objects.",
   "hyperlinks": [
     "https://www.youtube.com/watch?v=zC3OxonJcXQ",
