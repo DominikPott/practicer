@@ -1,0 +1,20 @@
+{
+  "name": "line_masterstudy",
+  "label": "Line Masterstudy",
+  "uuid": "bb5f842b-3667-4fe4-8b44-a502216a6f10",
+  "level": 3.0,
+  "categories": [
+    "drawing"
+  ],
+  "tags": [
+    "line",
+    "lineweight",
+    "drawing",
+    "fundamental"
+  ],
+  "thumbnail": "line_masterstudy.jpg",
+  "template": "default.psd",
+  "instruction": "Choose a reference drawing. First trace over the drawing, then make a seperate copy after that transfer the leraned onto a drawing of your own.",
+  "hyperlinks": [
+  ]
+}
