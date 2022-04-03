@@ -14,6 +14,8 @@ def stats(exercise):
 
 
 def increment_exercise_stats(exercise):
+    """Increments the exercise stats by one."""
+    """To max out on the level a increment of 13 exercises * a 7 levels can be used."""
     stats_ = stats(exercise)
     stats_["count"] += 1
     stats_["progress"] += 1

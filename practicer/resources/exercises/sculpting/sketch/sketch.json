@@ -1,0 +1,17 @@
+{
+  "name": "sketch",
+  "label": "Sketch",
+  "uuid": "f9bd2f32-2996-4907-ae9a-8cd55e86fd2c",
+  "level": 2.0,
+  "tags": [
+    "sculpting",
+    "fundamental"
+  ],
+  "categories": [
+    "sculpting"
+  ],
+  "thumbnail": "sketch.jpg",
+  "template": "sketch.zpr",
+  "instruction": "Sketch sculpt something.",
+  "hyperlinks": []
+}
